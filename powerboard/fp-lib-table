@@ -1,0 +1,6 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "LMR51450") (type "KiCad") (uri "${KIPRJMOD}/libs/ul_LMR51450SDRRR/footprints.pretty") (options "") (descr "TI WSON_SDRRR_TEX footprints (LMR51450)"))
+  (lib (name "USB4085-GF-A_REVA4") (type "KiCad") (uri "${KIPRJMOD}/libs/USB4085-GF-A_REVA4") (options "") (descr "GCT USB4085 footprint + 3D"))
+  (lib (name "AOSP21357") (type "KiCad") (uri "${KIPRJMOD}/libs/ul_AOSP21357/footprints.pretty") (options "") (descr "AOS SOP-8 (wide) footprints for AOSP21357"))
+)
