@@ -9452,7 +9452,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MX126-5.0-02P"
+		(property "Value" "TERM BLK 2POS SIDE ENT 3.5MM"
 			(at 365.76 190.4999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9463,7 +9463,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm"
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
 			(at 363.22 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -17416,7 +17416,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MX126-5.0-02P"
+		(property "Value" "TERM BLK 2POS SIDE ENT 3.5MM"
 			(at 365.76 218.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17427,7 +17427,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm"
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
 			(at 363.22 215.9 0)
 			(hide yes)
 			(show_name no)
@@ -17896,7 +17896,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MX126-5.0-02P"
+		(property "Value" "TERM BLK 2POS SIDE ENT 3.5MM"
 			(at 365.76 156.2099 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17907,7 +17907,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm"
+		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
 			(at 363.22 153.67 0)
 			(hide yes)
 			(show_name no)

@@ -192,6 +192,12 @@
 		(path "/c5b0bc95-fa1d-441a-9daf-21a4009e3291")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -278,14 +284,14 @@
 			)
 		)
 	)
-	(footprint "TerminalBlock_CUI:TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal"
+	(footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "01494f31-ef91-460b-8239-3dca4bb5c0b3")
-		(at 100.585 78.8675)
-		(descr "Terminal Block CUI TB007-508-02, 2 pins, pitch 5.08mm, size 10.8x10.2mm, drill diameter 1.6mm, pad diameter 2.4mm, https://www.cuidevices.com/product/resource/tb007-508.pdf")
-		(tags "THT Terminal Block CUI TB007-508-02 pitch 5.08mm size 10.8x10.2mm drill 1.6mm pad 2.4mm")
+		(at 102.87 78.74 -90)
+		(descr "Terminal Block Phoenix PT-1,5-2-3.5-H, 2 pins, pitch 3.5mm, size 7x7.6mm, drill diameter 1.2mm, pad diameter 2.4mm, ")
+		(tags "THT Terminal Block Phoenix PT-1,5-2-3.5-H pitch 3.5mm size 7x7.6mm drill 1.2mm pad 2.4mm")
 		(property "Reference" "J5"
-			(at 7.715 -6.1925 0)
+			(at 1.75 -4.22 90)
 			(layer "F.SilkS")
 			(uuid "539c03d8-7534-4d49-8545-e2e6ecad6e54")
 			(effects
@@ -295,8 +301,8 @@
 				)
 			)
 		)
-		(property "Value" "2-pin 5.08mm screw terminal"
-			(at 2.84 6.47 0)
+		(property "Value" "TERM BLK 2POS SIDE ENT 3.5MM"
+			(at 1.75 5.62 90)
 			(layer "F.Fab")
 			(uuid "cdf89bf3-3031-43f9-9af4-5bf7620469ac")
 			(effects
@@ -307,7 +313,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a4501c5e-c6c3-477d-b271-45baab7696cc")
@@ -318,7 +324,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b8557a77-e6e8-49cc-a80e-5919b9d157d7")
@@ -328,8 +334,8 @@
 				)
 			)
 		)
-		(property "KiLib_Generator" "terminal_block/CUI"
-			(at 0 0 0)
+		(property "KiLib_Generator" "terminal_block/Phoenix"
+			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "259d7797-46f3-4f80-ab1e-0782c682f841")
@@ -344,41 +350,27 @@
 		(path "/d80a28a0-956f-4d91-a412-057de653dd2b")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -2.66 -5.02)
-			(end 8.34 -5.02)
+			(start -1.87 4.62)
+			(end -1.87 -3.22)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "0e296f27-d6fe-4052-9b7d-51f76e56a847")
+			(uuid "e8a737e4-0083-4d97-bf75-d7350b203855")
 		)
 		(fp_line
-			(start -2.66 -3.4)
-			(end 8.34 -3.4)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "b20945c5-3285-454f-a9ab-57bb6b0a13f8")
-		)
-		(fp_line
-			(start -2.66 4.35)
-			(end 8.34 4.35)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "e72b187f-c2ea-42de-b85f-664ee29e45fa")
-		)
-		(fp_line
-			(start -2.66 5.47)
-			(end -2.66 -5.02)
+			(start -0.3 4.62)
+			(end -1.87 4.62)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -387,8 +379,18 @@
 			(uuid "d3d08300-24f2-46a8-9126-0e379405a99d")
 		)
 		(fp_line
-			(start -0.3 5.47)
-			(end -2.66 5.47)
+			(start 5.37 4.62)
+			(end 0.3 4.62)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e72b187f-c2ea-42de-b85f-664ee29e45fa")
+		)
+		(fp_line
+			(start -1.87 4.1)
+			(end 5.37 4.1)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -397,28 +399,38 @@
 			(uuid "5ae2e7b5-10a5-40d7-a575-5591073c5a97")
 		)
 		(fp_line
-			(start 8.34 -5.02)
-			(end 8.34 5.47)
+			(start -1.87 3)
+			(end 5.37 3)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "cb543c16-773f-459c-a1a7-aa2b7c9f4f89")
+			(uuid "b20945c5-3285-454f-a9ab-57bb6b0a13f8")
 		)
 		(fp_line
-			(start 8.34 5.47)
-			(end 0.3 5.47)
+			(start -1.87 -3.22)
+			(end 5.37 -3.22)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "6269129c-aecf-4060-b8c0-af92fcbb0382")
+			(uuid "747c4396-1356-4a6b-ab84-529b8379954d")
+		)
+		(fp_line
+			(start 5.37 -3.22)
+			(end 5.37 4.62)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "0e296f27-d6fe-4052-9b7d-51f76e56a847")
 		)
 		(fp_poly
 			(pts
-				(xy 0 5.47) (xy 0.44 6.08) (xy -0.44 6.08)
+				(xy 0 4.62) (xy 0.44 5.23) (xy -0.44 5.23)
 			)
 			(stroke
 				(width 0.12)
@@ -429,8 +441,8 @@
 			(uuid "ebb785d2-f2f3-4b1e-9a9c-284d02cabe03")
 		)
 		(fp_rect
-			(start -3.04 -5.4)
-			(end 8.72 5.85)
+			(start -2.25 -3.6)
+			(end 5.75 5)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -440,48 +452,18 @@
 			(uuid "06a26be5-b82f-427c-8302-ab9bb98e0e6f")
 		)
 		(fp_line
-			(start -2.54 -4.9)
-			(end 8.22 -4.9)
+			(start -1.35 4.5)
+			(end -1.75 4.1)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "9e32e78f-8dfa-4de9-bc53-26b8f7f666e5")
+			(uuid "8ed841c8-afbd-488d-a720-d288501f2611")
 		)
 		(fp_line
-			(start -2.54 -3.4)
-			(end 8.22 -3.4)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "5fdee2b4-c6c1-4b5f-bcfd-15f2d31116be")
-		)
-		(fp_line
-			(start -2.54 4.35)
-			(end -2.54 -4.9)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "16cf02aa-4332-43eb-9267-cbf794a95120")
-		)
-		(fp_line
-			(start -2.54 4.35)
-			(end 8.22 4.35)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "32f8c6b0-5119-463c-97df-44a16d826c62")
-		)
-		(fp_line
-			(start -1.54 5.35)
-			(end -2.54 4.35)
+			(start 5.25 4.5)
+			(end -1.35 4.5)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -490,18 +472,8 @@
 			(uuid "a3b20c9c-0ab5-4013-b709-95a2e52b35b1")
 		)
 		(fp_line
-			(start 1.177 -1.403)
-			(end -1.403 1.177)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "a7c3f5a0-8023-4c31-87ef-d76511a613ec")
-		)
-		(fp_line
-			(start 1.403 -1.177)
-			(end -1.177 1.403)
+			(start -1.75 4.1)
+			(end 5.25 4.1)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -510,18 +482,28 @@
 			(uuid "aed431cc-fd51-4347-8c9b-ab8aada5bf95")
 		)
 		(fp_line
-			(start 6.257 -1.403)
-			(end 3.677 1.177)
+			(start -1.75 4.1)
+			(end -1.75 -3.1)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "2051bcd0-aef7-4282-82c3-7078664677f2")
+			(uuid "d1a87a36-f2c6-4567-96e9-e673c3c8f722")
 		)
 		(fp_line
-			(start 6.483 -1.177)
-			(end 3.903 1.403)
+			(start -1.75 3)
+			(end 5.25 3)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "32f8c6b0-5119-463c-97df-44a16d826c62")
+		)
+		(fp_line
+			(start 1.138 -0.955)
+			(end -0.955 1.138)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -530,8 +512,48 @@
 			(uuid "51613571-76d1-42d8-ba8e-ac5a8da590b4")
 		)
 		(fp_line
-			(start 8.22 -4.9)
-			(end 8.22 5.35)
+			(start 4.638 -0.955)
+			(end 2.545 1.138)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "16cf02aa-4332-43eb-9267-cbf794a95120")
+		)
+		(fp_line
+			(start 0.955 -1.138)
+			(end -1.138 0.955)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "5fdee2b4-c6c1-4b5f-bcfd-15f2d31116be")
+		)
+		(fp_line
+			(start 4.455 -1.138)
+			(end 2.362 0.955)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "2051bcd0-aef7-4282-82c3-7078664677f2")
+		)
+		(fp_line
+			(start -1.75 -3.1)
+			(end 5.25 -3.1)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "a7c3f5a0-8023-4c31-87ef-d76511a613ec")
+		)
+		(fp_line
+			(start 5.25 -3.1)
+			(end 5.25 4.5)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -539,19 +561,9 @@
 			(layer "F.Fab")
 			(uuid "99e1155a-f6a9-4ff8-8733-2db137e826b4")
 		)
-		(fp_line
-			(start 8.22 5.35)
-			(end -1.54 5.35)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "d1a87a36-f2c6-4567-96e9-e673c3c8f722")
-		)
 		(fp_circle
 			(center 0 0)
-			(end 1.85 0)
+			(end 1.5 0)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -561,8 +573,8 @@
 			(uuid "73de3753-43d3-4ded-a221-bac2047b7e33")
 		)
 		(fp_circle
-			(center 5.08 0)
-			(end 6.93 0)
+			(center 3.5 0)
+			(end 5 0)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -572,7 +584,7 @@
 			(uuid "482fe52c-9f20-49ff-a94b-ee0162f70bf4")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.84 0.225 0)
+			(at 1.75 2.4 90)
 			(layer "F.Fab")
 			(uuid "ac5c5ab4-7147-474b-a149-24bf65137b7f")
 			(effects
@@ -583,9 +595,9 @@
 			)
 		)
 		(pad "1" thru_hole roundrect
-			(at 0 0)
+			(at 0 0 270)
 			(size 2.4 2.4)
-			(drill 1.6)
+			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.104167)
@@ -595,9 +607,9 @@
 			(uuid "fb3050f1-f2a6-48a1-a785-63a7508fcb70")
 		)
 		(pad "2" thru_hole circle
-			(at 5.08 0)
+			(at 3.5 0 270)
 			(size 2.4 2.4)
-			(drill 1.6)
+			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
@@ -606,7 +618,7 @@
 			(uuid "022c4749-68ca-41ab-beaf-b25e5fd531a2")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/TerminalBlock_CUI.3dshapes/TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal.step"
+		(model "${KICAD10_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -625,7 +637,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C9"
-			(at 0.65 -1.55 0)
+			(at -2.575 -0.5 0)
 			(layer "F.SilkS")
 			(uuid "012bff6c-416c-4fe5-901c-20eabbf0de57")
 			(effects
@@ -684,6 +696,12 @@
 		(path "/6a55204c-c0cf-45aa-bb1f-d58f222d061b")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -777,7 +795,7 @@
 		(descr "Choke, SMD, 6.3x6.3mm 3mm height")
 		(tags "Choke SMD")
 		(property "Reference" "L3"
-			(at -3.6 -4.65 0)
+			(at -3.025 -4.65 0)
 			(layer "F.SilkS")
 			(uuid "0768bc82-7461-4058-ab6b-0db714a6723a")
 			(effects
@@ -828,6 +846,12 @@
 		(path "/7f42386c-f844-4608-bd20-26dd07f36695")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1042,7 +1066,7 @@
 			(uuid "a2d9cd7d-2867-4562-ba28-69783b2e4e71")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_6.3x6.3_H3.step"
+		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Sunlord_MWSA0603S.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -1071,7 +1095,7 @@
 				)
 			)
 		)
-		(property "Value" "Stemma QT connector"
+		(property "Value" "SH1.0mm-4P-LT"
 			(at 0 3.3 0)
 			(layer "F.Fab")
 			(uuid "c99cb269-4555-4062-9346-7f8cb8d68831")
@@ -1108,6 +1132,12 @@
 		(path "/8df3659f-604e-4594-b031-9864793c27ea")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3" "4")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1574,6 +1604,12 @@
 		(path "/5bc15302-b8a2-4efd-ae84-992042cd3d29")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1726,6 +1762,12 @@
 		(path "/f036c9c6-8622-4005-8ada-8bd9f2c4cd1a")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1878,6 +1920,12 @@
 		(path "/6e10bc28-e9e6-4385-8274-29aa7651e052")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -1969,7 +2017,7 @@
 		(uuid "1d8d22ba-d7c0-4cb7-b14c-4f15480894cc")
 		(at 137.2 41.69 180)
 		(property "Reference" "J1"
-			(at 6.025 2.265 0)
+			(at 6.125 2.765 0)
 			(layer "F.SilkS")
 			(uuid "ecddfe50-55d9-4871-a44a-26d66f5fbd76")
 			(effects
@@ -2119,6 +2167,14 @@
 		(path "/999aa128-1171-4670-a600-b6af2640f887")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "A4" "A9" "B4" "B9" "A5" "B5" "A6" "B6" "A7" "B7" "A8" "B8" "S1"
+					"S2" "S3" "S4" "A1" "A12" "B1" "B12"
+				)
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2313,7 +2369,7 @@
 			(net "GND")
 			(pinfunction "GND_A1")
 			(pintype "power_in")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "191094c4-c025-4340-897b-2c32a1b7e88c")
 		)
 		(pad "A4" thru_hole circle
@@ -2325,7 +2381,7 @@
 			(net "VBUS")
 			(pinfunction "VBUS_A4")
 			(pintype "power_in")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "c6ff01c6-a370-4b01-bd15-0bae38d37a04")
 		)
 		(pad "A5" thru_hole circle
@@ -2337,7 +2393,7 @@
 			(net "Net-(J1-CC1)")
 			(pinfunction "CC1_A5")
 			(pintype "bidirectional")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "6039ba95-ead6-4dd5-9a37-ceff982d738b")
 		)
 		(pad "A6" thru_hole circle
@@ -2349,7 +2405,7 @@
 			(net "Net-(J1-DP1)")
 			(pinfunction "DP1_A6")
 			(pintype "bidirectional")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "5e1abcd4-fc98-43c3-bdf8-7656ee37dd59")
 		)
 		(pad "A7" thru_hole circle
@@ -2361,7 +2417,7 @@
 			(net "Net-(J1-DN1)")
 			(pinfunction "DN1_A7")
 			(pintype "bidirectional")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "33aa4526-30d0-4f5d-b825-e353f1d990fe")
 		)
 		(pad "A8" thru_hole circle
@@ -2373,7 +2429,7 @@
 			(net "unconnected-(J1-SBU1-PadA8)")
 			(pinfunction "SBU1_A8")
 			(pintype "bidirectional")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "2305f316-c1a5-469f-9af3-a79c10942f25")
 		)
 		(pad "A9" thru_hole circle
@@ -2385,7 +2441,7 @@
 			(net "VBUS")
 			(pinfunction "VBUS_A9")
 			(pintype "power_in")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "c3390b92-7c26-4f85-8d92-34e8ff0dc6c8")
 		)
 		(pad "A12" thru_hole circle
@@ -2397,7 +2453,7 @@
 			(net "GND")
 			(pinfunction "GND_A12")
 			(pintype "power_in")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "e5048ee9-9bf6-492e-b255-810e0ca323c7")
 		)
 		(pad "B1" thru_hole circle
@@ -2409,7 +2465,7 @@
 			(net "GND")
 			(pinfunction "GND_B1")
 			(pintype "power_in")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "92bfcbe6-aaca-4e66-b875-3d67f07e7a80")
 		)
 		(pad "B4" thru_hole circle
@@ -2421,7 +2477,7 @@
 			(net "VBUS")
 			(pinfunction "VBUS_B4")
 			(pintype "power_in")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "f1cfe7f9-eacc-44d5-ade6-a9bf55706735")
 		)
 		(pad "B5" thru_hole circle
@@ -2433,7 +2489,7 @@
 			(net "Net-(J1-CC2)")
 			(pinfunction "CC2_B5")
 			(pintype "bidirectional")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "48f88699-3d99-4d87-84b0-3a57224511f8")
 		)
 		(pad "B6" thru_hole circle
@@ -2445,7 +2501,7 @@
 			(net "unconnected-(J1-DP2-PadB6)")
 			(pinfunction "DP2_B6")
 			(pintype "bidirectional")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "a21cb073-35e6-49d6-9081-3518b8a96540")
 		)
 		(pad "B7" thru_hole circle
@@ -2457,7 +2513,7 @@
 			(net "unconnected-(J1-DN2-PadB7)")
 			(pinfunction "DN2_B7")
 			(pintype "bidirectional")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "d16d05cc-3b88-4688-9fd7-2c1cb447c77a")
 		)
 		(pad "B8" thru_hole circle
@@ -2469,7 +2525,7 @@
 			(net "unconnected-(J1-SBU2-PadB8)")
 			(pinfunction "SBU2_B8")
 			(pintype "bidirectional")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "52a8d754-30f0-4145-a18c-0161705c17be")
 		)
 		(pad "B9" thru_hole circle
@@ -2481,7 +2537,7 @@
 			(net "VBUS")
 			(pinfunction "VBUS_B9")
 			(pintype "power_in")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "8e6f4757-24d8-41c4-bfa4-e14b2d520a59")
 		)
 		(pad "B12" thru_hole circle
@@ -2493,7 +2549,7 @@
 			(net "GND")
 			(pinfunction "GND_B12")
 			(pintype "power_in")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "e0bf4ec9-b940-42f2-8c98-3d38418fcc0a")
 		)
 		(pad "S1" thru_hole oval
@@ -2505,7 +2561,7 @@
 			(net "GND")
 			(pinfunction "SHELL_S1")
 			(pintype "passive")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "3f6c0aa2-fea2-44e0-b425-9808a9783e9c")
 		)
 		(pad "S2" thru_hole oval
@@ -2517,7 +2573,7 @@
 			(net "GND")
 			(pinfunction "SHELL_S2")
 			(pintype "passive")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "077dbe57-3948-4966-a916-3722e0055b2d")
 		)
 		(pad "S3" thru_hole oval
@@ -2529,7 +2585,7 @@
 			(net "GND")
 			(pinfunction "SHELL_S3")
 			(pintype "passive")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "88e19732-9659-4466-ab86-e7fb13ddef59")
 		)
 		(pad "S4" thru_hole oval
@@ -2541,7 +2597,7 @@
 			(net "GND")
 			(pinfunction "SHELL_S4")
 			(pintype "passive")
-			(solder_mask_margin 0.102)
+			(solder_mask_margin 0)
 			(uuid "983d463a-c9b0-406a-ac23-861cec0cba24")
 		)
 		(embedded_fonts no)
@@ -2623,6 +2679,12 @@
 		(path "/a00a1b36-3195-4fef-8545-b9ff1fae07c6")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2775,6 +2837,12 @@
 		(path "/9a7e65cb-e347-4595-9427-8a04b2a148c6")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -2861,6 +2929,115 @@
 			)
 		)
 	)
+	(footprint "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad"
+		(layer "F.Cu")
+		(uuid "29224c27-e62f-4db9-8192-78344f883e15")
+		(at 109.22 74.93)
+		(descr "Mounting Hole 2.2mm, M2, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole M2 DIN965")
+		(property "Reference" "REF**"
+			(at 0 -2.85 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "42ee9dcf-d601-4d08-a9c8-d862997c81d1")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2_DIN965_Pad"
+			(at 0 2.85 0)
+			(layer "F.Fab")
+			(uuid "78f5f3bd-923a-4761-a9b2-9c86ca37e3e2")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dd67ef30-5eb5-40f5-abce-e98b505c670b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5512065c-a3f2-448b-a5ae-67af004eccae")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "055412a4-c293-4071-8fea-27e218d9ddef")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 1.9 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "945e0b65-c3fa-4115-b27b-94d8fc8bd0d3")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 2.15 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "f8da5d0e-a0fc-465f-9b2b-b283bc9e7298")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "35a002b4-5720-49ae-9eb0-f0b7341fc6f7")
+			(effects
+				(font
+					(size 0.95 0.95)
+					(thickness 0.14)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 3.8 3.8)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(zone_connect 2)
+			(uuid "e2680009-5a98-4a42-8a4d-c6b6df773142")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Resistor_SMD:R_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "2a2ba692-f367-419e-ae8b-ef4d701d36e1")
@@ -2927,6 +3104,12 @@
 		(path "/f02aa6bb-8bca-4714-8ce3-6cae3dda319f")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3020,7 +3203,7 @@
 		(descr "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R_SH2"
-			(at 1.675 -2.775 0)
+			(at -6.35 -1.125 0)
 			(layer "F.SilkS")
 			(uuid "cbd8e793-fa76-455f-a30a-cd30ccfb5290")
 			(effects
@@ -3079,6 +3262,12 @@
 		(path "/51b5f621-5ad1-464b-86a6-429dc473870f")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3231,6 +3420,12 @@
 		(path "/8f3f618a-fd16-4a69-98bf-7378e1bfc6fc")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3383,6 +3578,12 @@
 		(path "/eb687b96-ff12-46ff-a173-a8371456bdf8")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3535,6 +3736,12 @@
 		(path "/ad85c2b7-d983-43ed-ae03-a288cf147a30")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3621,6 +3828,115 @@
 			)
 		)
 	)
+	(footprint "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad"
+		(layer "F.Cu")
+		(uuid "2f3c546a-8ff7-4247-a951-5539606b7b56")
+		(at 109.22 49.175)
+		(descr "Mounting Hole 2.2mm, M2, generated by kicad-footprint-generator mountinghole.py")
+		(tags "mountinghole M2 DIN965")
+		(property "Reference" "REF**"
+			(at 0 -2.85 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "31cac878-fa05-4fa0-8396-b065ca05d075")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "MountingHole_2.2mm_M2_DIN965_Pad"
+			(at 0 2.85 0)
+			(layer "F.Fab")
+			(uuid "9e560b95-ed6a-4627-a9da-a0c760558ecd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5a9da7aa-73f7-48b6-addd-b379b5f9c5a5")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2db230c2-2410-40e0-91f0-52d320d2efba")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "mounting_hardware/mounting_hole"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "3a8aa7c1-2ac5-4e65-b2f7-3bb69937abd7")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(attr exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_circle
+			(center 0 0)
+			(end 1.9 0)
+			(stroke
+				(width 0.15)
+				(type solid)
+			)
+			(fill no)
+			(layer "Cmts.User")
+			(uuid "21fd18d8-01bd-4a7e-ac07-31e8936f9d63")
+		)
+		(fp_circle
+			(center 0 0)
+			(end 2.15 0)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "329996e2-346b-4a0f-a7ad-46f1e812b1d3")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "4a5059fc-37d3-45c6-88ad-c4bf808f310e")
+			(effects
+				(font
+					(size 0.95 0.95)
+					(thickness 0.14)
+				)
+			)
+		)
+		(pad "1" thru_hole circle
+			(at 0 0)
+			(size 3.8 3.8)
+			(drill 2.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(zone_connect 2)
+			(uuid "a8b3a646-eaa5-4a39-983e-9ae1ceb3138a")
+		)
+		(embedded_fonts no)
+	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "403afd71-1af3-4a1a-98bb-3e4f820f9a53")
@@ -3687,6 +4003,12 @@
 		(path "/c30c8597-8c8b-40d6-b588-556ea1cfc50d")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3839,6 +4161,12 @@
 		(path "/51f780ce-894c-4d23-b1ea-d6d849bee165")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -3932,7 +4260,7 @@
 		(descr "SMD pad as test Point, diameter 2.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP4"
-			(at 2.375 1.8 0)
+			(at 0.575 2.4 0)
 			(layer "F.SilkS")
 			(uuid "e9872a92-a3bc-4888-890c-e2458fc7efad")
 			(effects
@@ -3983,6 +4311,12 @@
 		(path "/107bcd82-c757-4ee6-87fa-8b2c383ba58d")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -4035,7 +4369,7 @@
 		(descr "Choke, SMD, 6.3x6.3mm 3mm height")
 		(tags "Choke SMD")
 		(property "Reference" "L2"
-			(at -3.475 4.525 0)
+			(at -3.125 4.525 0)
 			(layer "F.SilkS")
 			(uuid "57b652c2-62fb-457c-a8e2-adf0cbe06e7b")
 			(effects
@@ -4086,6 +4420,12 @@
 		(path "/d8806461-3e91-4d1c-acdf-7a02a8649538")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4300,7 +4640,7 @@
 			(uuid "7681d9ee-b50e-4102-ab8e-b03ac19a318e")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_6.3x6.3_H3.step"
+		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Sunlord_MWSA0603S.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -4315,11 +4655,11 @@
 	(footprint "MountingHole:MountingHole_2.2mm_M2_DIN965_Pad"
 		(layer "F.Cu")
 		(uuid "4657ed4e-a808-4521-9990-a402d6a53336")
-		(at 147.925 42.125)
+		(at 147.925 43.18)
 		(descr "Mounting Hole 2.2mm, M2, generated by kicad-footprint-generator mountinghole.py")
 		(tags "mountinghole M2 DIN965")
 		(property "Reference" "MRC 2026"
-			(at 1.3 -3.425 0)
+			(at 0 -3.81 0)
 			(layer "F.SilkS")
 			(uuid "f3ca2e82-d11b-427b-bd97-4e92895211d1")
 			(effects
@@ -4486,6 +4826,12 @@
 		(path "/bbfc19a3-e6cf-438a-9e21-0a9fe04fa5e8")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -4638,6 +4984,12 @@
 		(path "/427be810-3a02-4b64-a866-a5a12b0784b3")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "2" "4" "5" "6" "1")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5007,6 +5359,12 @@
 		(path "/70a4a753-f868-45f7-915b-1518201b9330")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5144,14 +5502,14 @@
 			)
 		)
 	)
-	(footprint "TerminalBlock_CUI:TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal"
+	(footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "4e55692f-f819-460d-b735-6c7a2a65d815")
-		(at 106.45 45.425 180)
-		(descr "Terminal Block CUI TB007-508-02, 2 pins, pitch 5.08mm, size 10.8x10.2mm, drill diameter 1.6mm, pad diameter 2.4mm, https://www.cuidevices.com/product/resource/tb007-508.pdf")
-		(tags "THT Terminal Block CUI TB007-508-02 pitch 5.08mm size 10.8x10.2mm drill 1.6mm pad 2.4mm")
+		(at 102.425 42.7 -90)
+		(descr "Terminal Block Phoenix PT-1,5-2-3.5-H, 2 pins, pitch 3.5mm, size 7x7.6mm, drill diameter 1.2mm, pad diameter 2.4mm, ")
+		(tags "THT Terminal Block Phoenix PT-1,5-2-3.5-H pitch 3.5mm size 7x7.6mm drill 1.2mm pad 2.4mm")
 		(property "Reference" "J4"
-			(at 2.84 -6.02 0)
+			(at 1.75 -4.22 90)
 			(layer "F.SilkS")
 			(uuid "2c748e07-569e-41da-94ea-2d09b361fae0")
 			(effects
@@ -5161,8 +5519,8 @@
 				)
 			)
 		)
-		(property "Value" "2-pin 5.08mm screw terminal"
-			(at 2.84 6.47 0)
+		(property "Value" "TERM BLK 2POS SIDE ENT 3.5MM"
+			(at 1.75 5.62 90)
 			(layer "F.Fab")
 			(uuid "74d76d11-27c4-43f6-98e1-74e9fd383844")
 			(effects
@@ -5173,7 +5531,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "92f9da6a-4ecf-48bf-bf0b-cb8850c9510c")
@@ -5184,7 +5542,7 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bbd697a3-c23b-461f-95ad-c06a627ec2dc")
@@ -5194,8 +5552,8 @@
 				)
 			)
 		)
-		(property "KiLib_Generator" "terminal_block/CUI"
-			(at 0 0 0)
+		(property "KiLib_Generator" "terminal_block/Phoenix"
+			(at 0 0 90)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "90240fd3-a7aa-4e0f-a6bb-d4036c50ff44")
@@ -5210,21 +5568,27 @@
 		(path "/18718acf-b5e6-43a6-b0f8-5aef20a33df0")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start 8.34 5.47)
-			(end 0.3 5.47)
+			(start -1.87 4.62)
+			(end -1.87 -3.22)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "b392ad1b-5542-45ea-8f02-b38a776ec492")
+			(uuid "561de5d9-2002-45c5-841e-d9a7c48c6fdf")
 		)
 		(fp_line
-			(start 8.34 -5.02)
-			(end 8.34 5.47)
+			(start -0.3 4.62)
+			(end -1.87 4.62)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -5233,28 +5597,8 @@
 			(uuid "a4be5697-756c-44b2-94ff-afb12c3c084f")
 		)
 		(fp_line
-			(start -0.3 5.47)
-			(end -2.66 5.47)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "a8864023-a42f-4162-b990-a2eec0484cbc")
-		)
-		(fp_line
-			(start -2.66 5.47)
-			(end -2.66 -5.02)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "e9f5e16d-0e4a-43e5-87ce-01ce1833a71b")
-		)
-		(fp_line
-			(start -2.66 4.35)
-			(end 8.34 4.35)
+			(start 5.37 4.62)
+			(end 0.3 4.62)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -5263,8 +5607,18 @@
 			(uuid "2b951ad1-5c1a-4f1b-bf32-cb8c37bc11ed")
 		)
 		(fp_line
-			(start -2.66 -3.4)
-			(end 8.34 -3.4)
+			(start -1.87 4.1)
+			(end 5.37 4.1)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e9f5e16d-0e4a-43e5-87ce-01ce1833a71b")
+		)
+		(fp_line
+			(start -1.87 3)
+			(end 5.37 3)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -5273,18 +5627,28 @@
 			(uuid "27e25751-7b8b-4b88-a8e3-8d364e2b5655")
 		)
 		(fp_line
-			(start -2.66 -5.02)
-			(end 8.34 -5.02)
+			(start -1.87 -3.22)
+			(end 5.37 -3.22)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "ba8cb1a4-646b-495a-9cf3-629bd36fc7a2")
+			(uuid "c85deaf0-b732-41aa-a540-7ce7ea3534e7")
+		)
+		(fp_line
+			(start 5.37 -3.22)
+			(end 5.37 4.62)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "816a77c5-5960-4068-90f4-a04988f3b966")
 		)
 		(fp_poly
 			(pts
-				(xy 0 5.47) (xy 0.44 6.08) (xy -0.44 6.08)
+				(xy 0 4.62) (xy 0.44 5.23) (xy -0.44 5.23)
 			)
 			(stroke
 				(width 0.12)
@@ -5295,8 +5659,8 @@
 			(uuid "4433cf3e-f948-46e7-a196-0315728dd792")
 		)
 		(fp_rect
-			(start -3.04 -5.4)
-			(end 8.72 5.85)
+			(start -2.25 -3.6)
+			(end 5.75 5)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -5306,18 +5670,8 @@
 			(uuid "789dd45f-0fbe-4d3e-b687-ad222755a451")
 		)
 		(fp_line
-			(start 8.22 5.35)
-			(end -1.54 5.35)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "cee32b19-9949-4ed5-aaf5-92e421ebf2e4")
-		)
-		(fp_line
-			(start 8.22 -4.9)
-			(end 8.22 5.35)
+			(start -1.35 4.5)
+			(end -1.75 4.1)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -5326,18 +5680,18 @@
 			(uuid "3e1027f8-4f3a-4fab-b085-9002f1c59752")
 		)
 		(fp_line
-			(start 6.483 -1.177)
-			(end 3.903 1.403)
+			(start 5.25 4.5)
+			(end -1.35 4.5)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "8c79bc45-8216-481f-85fc-8ba5418a2793")
+			(uuid "642e87d6-5436-4338-8f39-ba727bb340e0")
 		)
 		(fp_line
-			(start 6.257 -1.403)
-			(end 3.677 1.177)
+			(start -1.75 4.1)
+			(end 5.25 4.1)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -5346,28 +5700,8 @@
 			(uuid "99470ff1-0b18-4f23-ab1e-f6355c8db380")
 		)
 		(fp_line
-			(start 1.403 -1.177)
-			(end -1.177 1.403)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "a736f75d-70a8-4e12-b922-4b5dc41849ac")
-		)
-		(fp_line
-			(start 1.177 -1.403)
-			(end -1.403 1.177)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "65005ea6-1d42-473c-bee0-0d7029e684f9")
-		)
-		(fp_line
-			(start -1.54 5.35)
-			(end -2.54 4.35)
+			(start -1.75 4.1)
+			(end -1.75 -3.1)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -5376,28 +5710,18 @@
 			(uuid "b0b922a6-6c45-4d7b-9160-d5eeb8b596ff")
 		)
 		(fp_line
-			(start -2.54 4.35)
-			(end 8.22 4.35)
+			(start -1.75 3)
+			(end 5.25 3)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "961fba9d-7b52-4343-ac5d-91eead0cbd3c")
+			(uuid "9a81ade8-3084-4da1-9877-b98d0d4573af")
 		)
 		(fp_line
-			(start -2.54 4.35)
-			(end -2.54 -4.9)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "b7ff8c40-9139-464c-9d11-9b8239dfa159")
-		)
-		(fp_line
-			(start -2.54 -3.4)
-			(end 8.22 -3.4)
+			(start 1.138 -0.955)
+			(end -0.955 1.138)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -5406,29 +5730,58 @@
 			(uuid "1a9fdc3a-4bdd-40da-9d88-48adcecaf450")
 		)
 		(fp_line
-			(start -2.54 -4.9)
-			(end 8.22 -4.9)
+			(start 4.638 -0.955)
+			(end 2.545 1.138)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
 			(layer "F.Fab")
-			(uuid "642e87d6-5436-4338-8f39-ba727bb340e0")
+			(uuid "8c79bc45-8216-481f-85fc-8ba5418a2793")
 		)
-		(fp_circle
-			(center 5.08 0)
-			(end 6.93 0)
+		(fp_line
+			(start 0.955 -1.138)
+			(end -1.138 0.955)
 			(stroke
 				(width 0.1)
 				(type solid)
 			)
-			(fill no)
 			(layer "F.Fab")
-			(uuid "ac0a57ab-251f-478b-befd-2ce188318548")
+			(uuid "cee32b19-9949-4ed5-aaf5-92e421ebf2e4")
+		)
+		(fp_line
+			(start 4.455 -1.138)
+			(end 2.362 0.955)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "65005ea6-1d42-473c-bee0-0d7029e684f9")
+		)
+		(fp_line
+			(start -1.75 -3.1)
+			(end 5.25 -3.1)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "b7ff8c40-9139-464c-9d11-9b8239dfa159")
+		)
+		(fp_line
+			(start 5.25 -3.1)
+			(end 5.25 4.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "961fba9d-7b52-4343-ac5d-91eead0cbd3c")
 		)
 		(fp_circle
 			(center 0 0)
-			(end 1.85 0)
+			(end 1.5 0)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -5437,8 +5790,19 @@
 			(layer "F.Fab")
 			(uuid "1f840b5f-35fe-4c7c-a7a8-bd7405cb5986")
 		)
+		(fp_circle
+			(center 3.5 0)
+			(end 5 0)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "ac0a57ab-251f-478b-befd-2ce188318548")
+		)
 		(fp_text user "${REFERENCE}"
-			(at 2.84 0.225 0)
+			(at 1.75 2.4 90)
 			(layer "F.Fab")
 			(uuid "677a240a-30a7-4c3d-b17d-d64d322ae37c")
 			(effects
@@ -5449,9 +5813,9 @@
 			)
 		)
 		(pad "1" thru_hole roundrect
-			(at 0 0 180)
+			(at 0 0 270)
 			(size 2.4 2.4)
-			(drill 1.6)
+			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.104167)
@@ -5461,9 +5825,9 @@
 			(uuid "e609ff26-9c0d-49ce-be9a-c4995217171c")
 		)
 		(pad "2" thru_hole circle
-			(at 5.08 0 180)
+			(at 3.5 0 270)
 			(size 2.4 2.4)
-			(drill 1.6)
+			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
@@ -5472,7 +5836,7 @@
 			(uuid "21adea4a-d1fa-4c78-b24c-a0cca9311f79")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/TerminalBlock_CUI.3dshapes/TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal.step"
+		(model "${KICAD10_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -5491,7 +5855,7 @@
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C13"
-			(at -3.1 0.05 0)
+			(at -3.2 -0.075 0)
 			(layer "F.SilkS")
 			(uuid "90ff7e39-80f5-43c8-83d4-79059310fe50")
 			(effects
@@ -5550,6 +5914,12 @@
 		(path "/37c90bc5-1967-48e0-8f7e-bbd86c59644f")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5702,6 +6072,12 @@
 		(path "/d283d3ed-2278-471a-9815-93d10b08404b")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5854,6 +6230,12 @@
 		(path "/d003f976-0231-4644-a9aa-2f8d75fb09c7")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -5947,7 +6329,7 @@
 		(descr "SMD pad as test Point, diameter 2.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP1"
-			(at 0 -1.998 0)
+			(at 0.025 -2.375 0)
 			(layer "F.SilkS")
 			(uuid "60900e3e-0af8-4255-b62a-58eb2a6a9514")
 			(effects
@@ -5998,6 +6380,12 @@
 		(path "/6ced599d-5feb-4ae7-9d34-547fd1120fb4")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -6050,7 +6438,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C12"
-			(at -3.325 -0.45 90)
+			(at 3.8 0.425 180)
 			(layer "F.SilkS")
 			(uuid "30208cdc-c17d-4ca0-bda2-2b2d9899bc9f")
 			(effects
@@ -6109,6 +6497,12 @@
 		(path "/0da3ce1c-242a-4219-bc6e-9f760d0a2099")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6250,6 +6644,12 @@
 		(path "/54c295d7-2d5e-450c-893e-aebef410f1f6")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "5" "6" "7" "8" "1" "2" "3")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -6894,6 +7294,17 @@
 			(uuid "61f7ece2-e570-4076-a7c2-8ceef1b1de8d")
 		)
 		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Package_SO.3dshapes/HSOP-8-1EP_3.9x4.9mm_P1.27mm_EP2.41x3.1mm.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
@@ -6961,6 +7372,12 @@
 		(path "/8a31409b-37e1-447e-a390-548f01fb62fc")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7105,6 +7522,12 @@
 		(path "/07539902-d8c4-4298-bc1e-fa4c8f3e76ca")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -7229,6 +7652,12 @@
 		(path "/2cf4e9d5-d83d-4409-bad8-ca7adeeb655b")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7373,7 +7802,7 @@
 		(descr "SMD pad as test Point, diameter 2.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP5"
-			(at 2 -1.9 0)
+			(at 2.825 -0.65 0)
 			(layer "F.SilkS")
 			(uuid "1c7e87b8-ca83-4146-a844-f8b71bf9f518")
 			(effects
@@ -7424,6 +7853,12 @@
 		(path "/c6e41e89-5b3f-4aab-96a6-5d2889f836b9")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -7535,6 +7970,12 @@
 		(path "/933db6c2-9582-4503-80b6-b7842ef5b914")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -7687,6 +8128,12 @@
 		(path "/cb52d840-ccd5-49b0-aa55-8ed7fd15bf3b")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8069,7 +8516,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C11"
-			(at -3.425 -0.05 90)
+			(at 3.85 -0.05 180)
 			(layer "F.SilkS")
 			(uuid "f0ecef9d-e3b8-420a-b468-864b7cd07109")
 			(effects
@@ -8128,6 +8575,12 @@
 		(path "/3d7f3846-919d-4067-8a40-1ac43473f75b")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8280,6 +8733,12 @@
 		(path "/76a438cd-5f69-4a39-8ca9-adafaa1f36a2")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8432,6 +8891,12 @@
 		(path "/3a786203-a505-4f15-8f85-c8ab2a5d98d2")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -8873,6 +9338,12 @@
 		(path "/85a989fd-c6bf-4aa0-a85e-1ef9546e4707")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "8" "10" "9" "6" "7" "1" "2" "4" "5" "3")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9269,6 +9740,12 @@
 		(path "/b1ce77b1-2667-4120-9b3d-d08f705a0a01")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "8" "10" "9" "6" "7" "1" "2" "4" "5" "3")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9665,6 +10142,12 @@
 		(path "/6096bee3-9e08-4aa7-bbdf-3b0c9563cb0a")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9758,7 +10241,7 @@
 		(descr "Fuse SMD 2920 (7451 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size from: http://www.megastar.com/products/fusetronic/polyswitch/PDF/smd2920.pdf)")
 		(tags "fuse")
 		(property "Reference" "F3"
-			(at 0 3.675 90)
+			(at -3.625 -3.9 90)
 			(layer "F.SilkS")
 			(uuid "685a8938-afdf-4d58-abcb-b35346af0cd6")
 			(effects
@@ -9817,6 +10300,12 @@
 		(path "/151f84b1-107a-4b2b-a41a-2659cea909f3")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -9891,7 +10380,7 @@
 			(uuid "83997307-18b0-4dae-9b67-568efa333390")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Fuse.3dshapes/Fuse_2920_7451Metric.step"
+		(model "${KIPRJMOD}/libs/PTC_2920.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -9903,14 +10392,14 @@
 			)
 		)
 	)
-	(footprint "TerminalBlock_CUI:TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal"
+	(footprint "TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "814c8eac-b8b7-496c-a30f-98a142866991")
-		(at 133.935 78.5675)
-		(descr "Terminal Block CUI TB007-508-02, 2 pins, pitch 5.08mm, size 10.8x10.2mm, drill diameter 1.6mm, pad diameter 2.4mm, https://www.cuidevices.com/product/resource/tb007-508.pdf")
-		(tags "THT Terminal Block CUI TB007-508-02 pitch 5.08mm size 10.8x10.2mm drill 1.6mm pad 2.4mm")
+		(at 134.93 80.4475)
+		(descr "Terminal Block Phoenix PT-1,5-2-3.5-H, 2 pins, pitch 3.5mm, size 7x7.6mm, drill diameter 1.2mm, pad diameter 2.4mm, ")
+		(tags "THT Terminal Block Phoenix PT-1,5-2-3.5-H pitch 3.5mm size 7x7.6mm drill 1.2mm pad 2.4mm")
 		(property "Reference" "J3"
-			(at 9.7 5.125 0)
+			(at 7.31 4.6425 0)
 			(layer "F.SilkS")
 			(uuid "5bfdf3aa-ced8-44e9-8ba1-a4a820e1060a")
 			(effects
@@ -9920,8 +10409,8 @@
 				)
 			)
 		)
-		(property "Value" "2-pin 5.08mm screw terminal"
-			(at 2.84 6.47 0)
+		(property "Value" "TERM BLK 2POS SIDE ENT 3.5MM"
+			(at 1.75 5.62 0)
 			(layer "F.Fab")
 			(uuid "3de46a6c-ab6a-4460-801d-250945c66387")
 			(effects
@@ -9953,7 +10442,7 @@
 				)
 			)
 		)
-		(property "KiLib_Generator" "terminal_block/CUI"
+		(property "KiLib_Generator" "terminal_block/Phoenix"
 			(at 0 0 0)
 			(layer "F.SilkS")
 			(hide yes)
@@ -9969,21 +10458,37 @@
 		(path "/e691d64e-0493-4ee0-b7be-73164bb4f92a")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -2.66 -5.02)
-			(end 8.34 -5.02)
+			(start -1.87 -3.22)
+			(end 5.37 -3.22)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "1075b3fc-a988-42c2-bbdd-dae67cf5e585")
+			(uuid "bec80ba7-ac34-414a-8b6c-24962a994e5e")
 		)
 		(fp_line
-			(start -2.66 -3.4)
-			(end 8.34 -3.4)
+			(start -1.87 3)
+			(end 5.37 3)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "34597086-aeed-4471-aa29-13f2fda76d07")
+		)
+		(fp_line
+			(start -1.87 4.1)
+			(end 5.37 4.1)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -9992,18 +10497,8 @@
 			(uuid "1a81f584-ca25-4f4a-a517-6c9032730388")
 		)
 		(fp_line
-			(start -2.66 4.35)
-			(end 8.34 4.35)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "9d83a2d2-3199-4823-a605-31def621f7aa")
-		)
-		(fp_line
-			(start -2.66 5.47)
-			(end -2.66 -5.02)
+			(start -1.87 4.62)
+			(end -1.87 -3.22)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -10012,8 +10507,28 @@
 			(uuid "092be40a-5a59-43ef-864d-f2f8e8a77198")
 		)
 		(fp_line
-			(start -0.3 5.47)
-			(end -2.66 5.47)
+			(start -0.3 4.62)
+			(end -1.87 4.62)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "a2f30185-11f4-4143-8d85-222d01a765e2")
+		)
+		(fp_line
+			(start 5.37 -3.22)
+			(end 5.37 4.62)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "d332fdad-d917-4d78-a811-c304a73ab169")
+		)
+		(fp_line
+			(start 5.37 4.62)
+			(end 0.3 4.62)
 			(stroke
 				(width 0.12)
 				(type solid)
@@ -10021,29 +10536,9 @@
 			(layer "F.SilkS")
 			(uuid "82015b6e-43b6-4e60-858a-58e0cc224468")
 		)
-		(fp_line
-			(start 8.34 -5.02)
-			(end 8.34 5.47)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "678f4bed-168a-4915-96ff-82a423b538b8")
-		)
-		(fp_line
-			(start 8.34 5.47)
-			(end 0.3 5.47)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "13f8c142-5b00-4ffe-9393-2d6e6236093d")
-		)
 		(fp_poly
 			(pts
-				(xy 0 5.47) (xy 0.44 6.08) (xy -0.44 6.08)
+				(xy 0 4.62) (xy 0.44 5.23) (xy -0.44 5.23)
 			)
 			(stroke
 				(width 0.12)
@@ -10054,8 +10549,8 @@
 			(uuid "b3fc2a13-2c7d-4b67-a203-f19961903476")
 		)
 		(fp_rect
-			(start -3.04 -5.4)
-			(end 8.72 5.85)
+			(start -2.25 -3.6)
+			(end 5.75 5)
 			(stroke
 				(width 0.05)
 				(type solid)
@@ -10065,8 +10560,8 @@
 			(uuid "ba40a4e1-0e40-4851-a03c-31ab2c4491a6")
 		)
 		(fp_line
-			(start -2.54 -4.9)
-			(end 8.22 -4.9)
+			(start -1.75 -3.1)
+			(end 5.25 -3.1)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -10075,78 +10570,8 @@
 			(uuid "b8ca8c87-c05f-4430-9b60-9b4263baf817")
 		)
 		(fp_line
-			(start -2.54 -3.4)
-			(end 8.22 -3.4)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "76d4a53b-44fd-4ed8-82dd-c2992077e8dd")
-		)
-		(fp_line
-			(start -2.54 4.35)
-			(end -2.54 -4.9)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "bb32cc79-9700-4f73-bb61-99a44a447a09")
-		)
-		(fp_line
-			(start -2.54 4.35)
-			(end 8.22 4.35)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "2e3758ed-6072-4a84-ac3d-92c95aa5e400")
-		)
-		(fp_line
-			(start -1.54 5.35)
-			(end -2.54 4.35)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "5b2fdb9b-36bb-4029-bd89-5f21ad18f64a")
-		)
-		(fp_line
-			(start 1.177 -1.403)
-			(end -1.403 1.177)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "d5d65174-7060-44f5-9a8e-f16ed3a9ed74")
-		)
-		(fp_line
-			(start 1.403 -1.177)
-			(end -1.177 1.403)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "702cc07d-f798-432b-abee-b4ae0579d21a")
-		)
-		(fp_line
-			(start 6.257 -1.403)
-			(end 3.677 1.177)
-			(stroke
-				(width 0.1)
-				(type solid)
-			)
-			(layer "F.Fab")
-			(uuid "5362f651-6672-4eec-9e22-216c08ab1c16")
-		)
-		(fp_line
-			(start 6.483 -1.177)
-			(end 3.903 1.403)
+			(start -1.75 3)
+			(end 5.25 3)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -10155,8 +10580,8 @@
 			(uuid "0bae117d-e1ad-40f1-b86d-30a7b1a9d90d")
 		)
 		(fp_line
-			(start 8.22 -4.9)
-			(end 8.22 5.35)
+			(start -1.75 4.1)
+			(end -1.75 -3.1)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -10165,8 +10590,48 @@
 			(uuid "24c67802-cc05-4368-a35e-223fb3f46795")
 		)
 		(fp_line
-			(start 8.22 5.35)
-			(end -1.54 5.35)
+			(start -1.75 4.1)
+			(end 5.25 4.1)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "7a3753dc-11e7-4ce4-aae1-a34655d4f234")
+		)
+		(fp_line
+			(start -1.35 4.5)
+			(end -1.75 4.1)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "76d4a53b-44fd-4ed8-82dd-c2992077e8dd")
+		)
+		(fp_line
+			(start 0.955 -1.138)
+			(end -1.138 0.955)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "2e3758ed-6072-4a84-ac3d-92c95aa5e400")
+		)
+		(fp_line
+			(start 1.138 -0.955)
+			(end -0.955 1.138)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "5362f651-6672-4eec-9e22-216c08ab1c16")
+		)
+		(fp_line
+			(start 4.455 -1.138)
+			(end 2.362 0.955)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -10174,9 +10639,39 @@
 			(layer "F.Fab")
 			(uuid "a7888c15-5a06-4bba-bfe2-9ddae8a0894b")
 		)
+		(fp_line
+			(start 4.638 -0.955)
+			(end 2.545 1.138)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "bb32cc79-9700-4f73-bb61-99a44a447a09")
+		)
+		(fp_line
+			(start 5.25 -3.1)
+			(end 5.25 4.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "5b2fdb9b-36bb-4029-bd89-5f21ad18f64a")
+		)
+		(fp_line
+			(start 5.25 4.5)
+			(end -1.35 4.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "d5d65174-7060-44f5-9a8e-f16ed3a9ed74")
+		)
 		(fp_circle
 			(center 0 0)
-			(end 1.85 0)
+			(end 1.5 0)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -10186,8 +10681,8 @@
 			(uuid "47c1333c-7cf2-42f4-ac53-a740d8440097")
 		)
 		(fp_circle
-			(center 5.08 0)
-			(end 6.93 0)
+			(center 3.5 0)
+			(end 5 0)
 			(stroke
 				(width 0.1)
 				(type solid)
@@ -10197,7 +10692,7 @@
 			(uuid "dadeebf1-464b-4da1-98b4-a1ccc43c1d0e")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 2.84 0.225 0)
+			(at 1.75 2.4 0)
 			(layer "F.Fab")
 			(uuid "2cacb91c-9c14-4478-b8ce-b1b43fa18116")
 			(effects
@@ -10210,7 +10705,7 @@
 		(pad "1" thru_hole roundrect
 			(at 0 0)
 			(size 2.4 2.4)
-			(drill 1.6)
+			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.104167)
@@ -10220,9 +10715,9 @@
 			(uuid "50ccd299-4584-4515-ba36-cd972ed24f9a")
 		)
 		(pad "2" thru_hole circle
-			(at 5.08 0)
+			(at 3.5 0)
 			(size 2.4 2.4)
-			(drill 1.6)
+			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(net "GND")
@@ -10231,7 +10726,7 @@
 			(uuid "c097bea3-9e6d-44df-a6a1-809d2e12a80e")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/TerminalBlock_CUI.3dshapes/TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal.step"
+		(model "${KICAD10_3DMODEL_DIR}/TerminalBlock_Phoenix.3dshapes/TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10301,6 +10796,12 @@
 		(path "/e75c409a-f449-433e-a835-32b9e695290e")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -10412,6 +10913,12 @@
 		(path "/77676746-45fe-4b16-87f3-8b8d32fc4d5a")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10564,6 +11071,12 @@
 		(path "/f15a1573-997c-46e9-9ffe-f7c0eb5b9b7a")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10657,7 +11170,7 @@
 		(descr "Fuse SMD 2920 (7451 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size from: http://www.megastar.com/products/fusetronic/polyswitch/PDF/smd2920.pdf)")
 		(tags "fuse")
 		(property "Reference" "F2"
-			(at 0 -3.68 90)
+			(at 3.65 3.875 90)
 			(layer "F.SilkS")
 			(uuid "b36fb6c5-b01c-4652-aa01-7cf6f7ee7167")
 			(effects
@@ -10716,6 +11229,12 @@
 		(path "/04b4fe91-45ea-42f0-9bc4-c3eb76d6391c")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -10790,7 +11309,7 @@
 			(uuid "662ac7b0-cfa9-45a0-a721-22f54feae887")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Fuse.3dshapes/Fuse_2920_7451Metric.step"
+		(model "${KIPRJMOD}/libs/PTC_2920.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10868,6 +11387,12 @@
 		(path "/dcbe322e-c4d9-4c82-afa0-4bdfc511c68a")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11020,6 +11545,12 @@
 		(path "/55531e11-9038-441c-ab74-751126ce0db9")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11113,7 +11644,7 @@
 		(descr "Resistor SMD 2512 (6332 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R_SH1"
-			(at -2.325 2.85 0)
+			(at -6.275 1.4 180)
 			(layer "F.SilkS")
 			(uuid "4a4662ad-47e0-4b46-b45a-808808c45349")
 			(effects
@@ -11172,6 +11703,12 @@
 		(path "/229f3dcd-3b59-4e6e-a88c-33713493ef87")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11324,6 +11861,12 @@
 		(path "/bb12376e-7675-456f-833b-579c118d2a61")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "4" "5" "3" "2" "1" "11" "10" "7" "6" "8" "9")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11681,7 +12224,7 @@
 			(uuid "cc0d5ab9-9b55-41a5-a21c-742315e54c2e")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/WDFN-10-1EP_3x3mm_P0.5mm_EP1.8x2.5mm.step"
+		(model "${KICAD10_3DMODEL_DIR}/Package_DFN_QFN.3dshapes/DFN-10-1EP_3x3mm_P0.5mm_EP1.65x2.38mm.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -11700,7 +12243,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C16"
-			(at -3.025 0.375 270)
+			(at 3.9 -0.45 0)
 			(layer "F.SilkS")
 			(uuid "b58f0856-65c8-4409-b144-fcd4be32c402")
 			(effects
@@ -11759,6 +12302,12 @@
 		(path "/85704b27-30d2-49e4-ac94-2d25ff38b888")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -11911,6 +12460,12 @@
 		(path "/7cb131d4-e598-4532-98b5-8e5049b6fa92")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12063,6 +12618,12 @@
 		(path "/4cc40428-4c21-4533-924d-75759c1cd3f9")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12207,6 +12768,12 @@
 		(path "/f16d8c5b-3b47-45a6-b9f8-01d9546c4ded")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -12318,6 +12885,12 @@
 		(path "/464ecdaa-1129-46b4-b758-16f4a720061b")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12470,6 +13043,12 @@
 		(path "/98affec1-1506-49eb-b1da-97b78ff4ce40")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12622,6 +13201,12 @@
 		(path "/a19a4e60-9ba6-417a-88a7-634b734f9dcb")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12715,7 +13300,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C15"
-			(at -3.075 -0.45 270)
+			(at 3.85 -0.125 180)
 			(layer "F.SilkS")
 			(uuid "f7a250f6-d092-4292-b56f-d15322567f7a")
 			(effects
@@ -12774,6 +13359,12 @@
 		(path "/211ab91e-d88f-41f1-bf7c-a844a6f0ab5b")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -12918,6 +13509,12 @@
 		(path "/0310fbba-79a2-4a36-bcb7-46b4b21d5b63")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13132,7 +13729,7 @@
 			(uuid "42e1e0c4-b322-4343-bc4b-b1ba121e1cd8")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_6.3x6.3_H3.step"
+		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Sunlord_MWSA0603S.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -13151,7 +13748,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R7"
-			(at 0.4 -1.7 0)
+			(at -0.525 -1.5 0)
 			(layer "F.SilkS")
 			(uuid "4d151dd4-ab9b-46d6-835d-4ef30aebc593")
 			(effects
@@ -13210,6 +13807,12 @@
 		(path "/1e9235e4-8f0c-4fc7-8910-9cef9d454bff")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13351,6 +13954,12 @@
 		(path "/c9ca53b5-d8ac-49d5-9381-e9fdf1136162")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "9" "6" "5" "10" "11" "13" "12" "4" "1" "2" "3" "7" "8")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -13798,6 +14407,12 @@
 		(path "/3899d161-f96b-4617-b44c-80661aa342bf")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14180,8 +14795,9 @@
 		(descr "Mounting Hole 2.2mm, M2, generated by kicad-footprint-generator mountinghole.py")
 		(tags "mountinghole M2 DIN965")
 		(property "Reference" "Matrix PowerBoard Rev. A"
-			(at -5.15 3.625 0)
+			(at -8.25 -8.59 0)
 			(layer "F.SilkS")
+			(hide yes)
 			(uuid "4173cde5-6dbb-4ee0-8df3-f04417dd8ee8")
 			(effects
 				(font
@@ -14347,6 +14963,12 @@
 		(path "/8b60eff9-c9b5-4fb5-a23e-7e544f32c3a2")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "4" "2" "6" "5")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14703,6 +15325,12 @@
 		(path "/1464cf02-c777-4e91-8c5f-2d3a43a7e019")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -14844,6 +15472,12 @@
 		(path "/ef44f7a5-e0e4-4056-8333-367bac5dd2c1")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "9" "6" "5" "10" "11" "13" "12" "4" "1" "2" "3" "7" "8")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15304,6 +15938,12 @@
 		(path "/15495e59-b237-47fa-817f-f0a8be7f1869")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15507,6 +16147,12 @@
 		(path "/4d8af95c-bf52-4e8f-88f7-b13bc7751499")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15581,7 +16227,7 @@
 			(uuid "15ecbb86-fc4f-4f37-ba02-2f26e8b78aa3")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Fuse.3dshapes/Fuse_2920_7451Metric.step"
+		(model "${KIPRJMOD}/libs/PTC_2920.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -15659,6 +16305,12 @@
 		(path "/be76142a-6b0c-4a0e-acfb-b3a5a93ee977")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15811,6 +16463,12 @@
 		(path "/d99e541c-a104-4300-89af-3954e6bec20b")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -15963,6 +16621,12 @@
 		(path "/fc3e0254-27d3-40b4-b623-5e00b2eda1cb")
 		(sheetname "/")
 		(sheetfile "powerboard.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "3" "1" "5" "2" "4")
+			)
+		)
 		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
@@ -16295,6 +16959,7 @@
 	(gr_rect
 		(start 96.275 37.4)
 		(end 153.55 87.2)
+		(radius 1.5)
 		(stroke
 			(width 0.05)
 			(type default)
@@ -16303,6 +16968,18 @@
 		(layer "Edge.Cuts")
 		(uuid "3bd3ccc6-50aa-4ef5-bd84-57bc030470a6")
 	)
+	(gr_text "Matrix\nPowerboard \nRev. A"
+		(at 132.08 76.2 0)
+		(layer "F.SilkS")
+		(uuid "64e7eadc-39e3-4a3f-8563-feabcd1d7c2b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
 	(segment
 		(start 134.225 46.23)
 		(end 134.25 46.205)
@@ -16310,14 +16987,6 @@
 		(layer "F.Cu")
 		(net "GND")
 		(uuid "154edcdb-caac-4739-9e27-dba24c17e730")
-	)
-	(segment
-		(start 139.35 44.395381)
-		(end 139.35 44.855)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "VBUS")
-		(uuid "77765268-c19e-41be-8de1-1d913249fbdd")
 	)
 	(segment
 		(start 140.58213 54.425)
