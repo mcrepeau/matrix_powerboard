@@ -8615,6 +8615,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "MHCI06050-4R7M-R8A"
 			(at 260.35 44.45 90)
@@ -8716,6 +8717,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "2920L700/12MR"
 			(at 350.52 187.96 90)
@@ -8976,6 +8978,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CL31A476MPHNNNE"
 			(at 140.97 158.75 0)
@@ -9315,6 +9318,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF1001T5E"
 			(at 278.13 109.22 0)
@@ -9416,6 +9420,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "2920L700/12MR"
 			(at 350.52 215.9 90)
@@ -9516,6 +9521,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 148.59 234.95 0)
@@ -9868,6 +9874,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF1001T5E"
 			(at 120.65 158.75 0)
@@ -10048,6 +10055,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CL31A476MPHNNNE"
 			(at 129.54 241.3 0)
@@ -10227,6 +10235,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "RLP25FEER002"
 			(at 218.44 190.5 90)
@@ -10483,6 +10492,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 149.86 152.4 0)
@@ -10750,6 +10760,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CC0603KRX7R9BB104"
 			(at 90.17 224.79 90)
@@ -10852,6 +10863,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "EEEFPA221XAP"
 			(at 340.36 222.25 0)
@@ -10955,6 +10967,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "EMVH350ARA101MHA0G"
 			(at 143.51 45.72 0)
@@ -11135,6 +11148,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CL31A476MPHNNNE"
 			(at 129.54 158.75 0)
@@ -11236,6 +11250,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "AP63205WU-7"
 			(at 228.6 46.99 0)
@@ -11426,6 +11441,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CC0603KRX7R9BB104"
 			(at 248.92 170.18 90)
@@ -11762,6 +11778,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF5103T5E"
 			(at 226.06 109.22 0)
@@ -11941,6 +11958,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "2920L150/12MR"
 			(at 350.52 153.67 90)
@@ -12042,6 +12060,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "RLP25FEER002"
 			(at 218.44 243.84 90)
@@ -12142,6 +12161,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF1002T5E"
 			(at 95.25 170.18 90)
@@ -12248,6 +12268,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "AOSP21357"
 			(at 130.81 41.91 0)
@@ -12444,6 +12465,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF5101T5E"
 			(at 109.22 52.07 90)
@@ -12781,6 +12803,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF1001T5E"
 			(at 120.65 241.3 0)
@@ -12961,6 +12984,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF5102T5E"
 			(at 107.95 158.75 0)
@@ -13373,6 +13397,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CC0603KRX7R9BB104"
 			(at 90.17 142.24 90)
@@ -13634,6 +13659,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF1002T5E"
 			(at 266.7 109.22 0)
@@ -13812,6 +13838,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 273.05 100.33 0)
@@ -14004,6 +14031,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF1003T5E"
 			(at 232.41 109.22 0)
@@ -14106,6 +14134,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF5102T5E"
 			(at 107.95 241.3 0)
@@ -14206,6 +14235,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CC0603KRX7R9BB104"
 			(at 246.38 46.99 90)
@@ -14384,6 +14414,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "MHCI06050-4R7M-R8A"
 			(at 102.87 234.95 90)
@@ -14564,6 +14595,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CL31A476MPHNNNE"
 			(at 140.97 241.3 0)
@@ -14667,6 +14699,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "INA226AIDGSR"
 			(at 240.03 241.3 0)
@@ -14869,6 +14902,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CL10C330JB8NNNC"
 			(at 115.57 165.1 90)
@@ -14970,6 +15004,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "LM66100DCK"
 			(at 341.63 45.72 0)
@@ -15163,6 +15198,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "BM04B-SRSS-TB"
 			(at 361.95 120.65 0)
@@ -15350,6 +15386,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF1302T5E"
 			(at 232.41 128.27 0)
@@ -15452,6 +15489,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CL21A226MAQNNNE"
 			(at 273.05 52.07 0)
@@ -15631,6 +15669,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF2202T5E"
 			(at 111.76 67.31 90)
@@ -15735,6 +15774,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "DATASHEET_URL" "https://s3.amazonaws.com/snapeda/datasheet/USB4085-GF-A_Global_Connector_Technology.pdf"
 			(at 39.37 62.23 0)
@@ -15988,6 +16028,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF4992T5E"
 			(at 116.84 45.72 0)
@@ -16168,6 +16209,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CL10A105KB8NNNC"
 			(at 327.66 53.34 0)
@@ -16269,6 +16311,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF2004T5E"
 			(at 250.19 97.79 90)
@@ -16527,6 +16570,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF3902T5E"
 			(at 226.06 121.92 0)
@@ -16630,6 +16674,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "INA226AIDGSR"
 			(at 240.03 187.96 0)
@@ -16991,6 +17036,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "HUSB238_002DD"
 			(at 91.44 59.69 0)
@@ -17199,6 +17245,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF2201T5E"
 			(at 160.02 240.03 0)
@@ -17300,6 +17347,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CL10A105KB8NNNC"
 			(at 83.82 39.37 90)
@@ -17481,6 +17529,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CL10A105KB8NNNC"
 			(at 358.14 49.53 0)
@@ -17659,6 +17708,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CL10C330JB8NNNC"
 			(at 115.57 247.65 90)
@@ -17843,6 +17893,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "LMR51450SDRRR"
 			(at 55.88 227.33 0)
@@ -18056,6 +18107,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "EEEFPA221XAP"
 			(at 340.36 194.31 0)
@@ -18156,6 +18208,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CC0603KRX7R9BB104"
 			(at 248.92 223.52 90)
@@ -18258,6 +18311,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "GRM21BR61H106KE43L"
 			(at 54.61 209.55 0)
@@ -18674,6 +18728,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "MHCI06050-4R7M-R8A"
 			(at 102.87 152.4 90)
@@ -18777,6 +18832,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF2201T5E"
 			(at 160.02 157.48 0)
@@ -18879,6 +18935,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "GRM21BR61H106KE43L"
 			(at 53.34 129.54 0)
@@ -19378,6 +19435,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "CL21A226MAQNNNE"
 			(at 284.48 52.07 0)
@@ -19560,6 +19618,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "LMR51450SDRRR"
 			(at 55.88 144.78 0)
@@ -19693,6 +19752,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF1002T5E"
 			(at 95.25 252.73 90)
@@ -19794,6 +19854,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "0603WAF100JT5E"
 			(at 99.06 39.37 90)
@@ -19896,6 +19957,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "GRM21BR61H106KE43L"
 			(at 209.55 52.07 0)
@@ -20232,6 +20294,7 @@
 					(size 1.27 1.27)
 				)
 			)
+			(hide yes)
 		)
 		(property "Part Number" "LM397MFX"
 			(at 248.92 118.11 0)
