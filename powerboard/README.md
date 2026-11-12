@@ -55,10 +55,3 @@ Panels are **5V only**. 20V@3A and 5V@8.4A are high-energy: protection is the HU
 disconnect, per-rail PTC fuses (F1 tap, F2/F3 channels), converter current limits — never rely on
 software for hard limits. No input fuse (compliant PD sources only / current-limited bench supply).
 Strain-relieve all cables. Full notes: DESIGN.md §9.
-
-## Files
-
-- `powerboard.kicad_pro` / `.kicad_sch` / `.kicad_pcb` — KiCad project (schematic + layout)
-- `libs/` — project symbol/footprint libraries (`sym-lib-table`, `fp-lib-table` at root)
-- `datasheets/` — PDFs for every IC
-- `DATASHEET.md` — board spec · `DESIGN.md` — design detail · this file — overview

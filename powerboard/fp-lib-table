@@ -3,4 +3,8 @@
   (lib (name "LMR51450") (type "KiCad") (uri "${KIPRJMOD}/libs/ul_LMR51450SDRRR/footprints.pretty") (options "") (descr "TI WSON_SDRRR_TEX footprints (LMR51450)"))
   (lib (name "USB4085-GF-A_REVA4") (type "KiCad") (uri "${KIPRJMOD}/libs/USB4085-GF-A_REVA4") (options "") (descr "GCT USB4085 footprint + 3D"))
   (lib (name "AOSP21357") (type "KiCad") (uri "${KIPRJMOD}/libs/ul_AOSP21357/footprints.pretty") (options "") (descr "AOS SOP-8 (wide) footprints for AOSP21357"))
+  (lib (name "Fuse") (type "KiCad") (uri "${KIPRJMOD}/libs/Fuse") (options "") (descr "Project shadow of official Fuse lib (adds missing 3D model)"))
+  (lib (name "Inductor_SMD") (type "KiCad") (uri "${KIPRJMOD}/libs/Inductor_SMD") (options "") (descr "Project shadow of official Inductor_SMD lib (adds missing 3D model)"))
+  (lib (name "TerminalBlock_CUI") (type "KiCad") (uri "${KIPRJMOD}/libs/TerminalBlock_CUI") (options "") (descr "Project shadow of official TerminalBlock_CUI lib (adds missing 3D model)"))
+  (lib (name "Package_DFN_QFN") (type "KiCad") (uri "${KIPRJMOD}/libs/Package_DFN_QFN") (options "") (descr "Project shadow of official Package_DFN_QFN lib (adds missing 3D model)"))
 )

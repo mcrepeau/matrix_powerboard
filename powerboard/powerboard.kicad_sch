@@ -10008,7 +10008,7 @@
 				)
 			)
 		)
-		(property "Value" "2m 1% 1W"
+		(property "Value" "RLP25FEER002"
 			(at 218.44 186.69 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11616,7 +11616,7 @@
 				)
 			)
 		)
-		(property "Value" "2m 1% 1W"
+		(property "Value" "RLP25FEER002"
 			(at 218.44 240.03 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14130,8 +14130,8 @@
 				)
 			)
 		)
-		(property "Value" "33pF"
-			(at 120.65 169.672 90)
+		(property "Value" "CL10C330JB8NNNC"
+			(at 118.364 169.418 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14628,8 +14628,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF/10V X7R"
-			(at 255.778 54.864 0)
+		(property "Value" "CL21A226MAQNNNE"
+			(at 251.714 54.61 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14639,7 +14639,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 274.0152 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -16585,8 +16585,8 @@
 				)
 			)
 		)
-		(property "Value" "33pF"
-			(at 120.65 252.222 90)
+		(property "Value" "CL10C330JB8NNNC"
+			(at 117.856 251.968 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18136,7 +18136,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF/10V X7R"
+		(property "Value" "CL21A226MAQNNNE"
 			(at 288.29 53.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18147,7 +18147,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 285.4452 55.88 0)
 			(hide yes)
 			(show_name no)

@@ -38,7 +38,7 @@ VDC ─┬─► U2 AP63205 ──► VCC (housekeeping 5V) ──► U5 LM66100
             D1 (anode VCC) + R15 1k ──► /POW_EN : fault LED, lit when input invalid
 ```
 
-Portal links: `J3` 2-pin 5.08mm screw terminal (`+5V` via F1, `GND`) wired to the MatrixPortal's
+Portal links: `J3` 2-pin 3.5mm screw terminal, Phoenix PT-1,5-2-3.5-H (`+5V` via F1, `GND`) wired to the MatrixPortal's
 **M3 power screw terminals** (+5V/GND — the pair meant to power the matrix), and `J2` STEMMA QT
 (GND, +3.3V, /SDA, /SCL). The HUB75 port carries data + GND only, no power; the 3-pin A0 JST
 is unused (available if a GPIO link such as PG is ever wanted). There is no CH_EN or PG line.
@@ -147,7 +147,7 @@ while CE < VIN, off when CE > VIN, so it also blocks back-feed). ST is left NC. 
 would drop ≈0.4V from a rail that already sits near 4.8V on a 5V fallback.
 
 **F1 polyfuse 2920L150/12MR** (1.5A hold, 12V) between U5 VOUT and J3 — protects the 1.5A
-LM66100; the tap is ≤1A. **J3** 2-pin 5.08mm screw terminal (`+5V` via F1, `GND`) → the
+LM66100; the tap is ≤1A. **J3** 2-pin 3.5mm screw terminal, Phoenix PT-1,5-2-3.5-H (`+5V` via F1, `GND`) → the
 MatrixPortal's M3 power screw terminals (+5V, GND). C17 1µF on the tap.
 
 ### Sheet 3: Supervisor and fault LED
@@ -212,7 +212,7 @@ Portal's QT port has the I2C pull-ups to 3.3V; the board relies on those.
 
 | Link | Connector | Direction |
 |---|---|---|
-| 5V tap (≤1A) | J3 2-pin screw terminal (`+5V` via F1, `GND`) → Portal M3 power screw terminals (+5V, GND) | out |
+| 5V tap (≤1A) | J3 2-pin 3.5mm screw terminal, Phoenix PT-1,5-2-3.5-H (`+5V` via F1, `GND`) → Portal M3 power screw terminals (+5V, GND) | out |
 | I2C and 3.3V | J2 (QT cable) | in/out |
 
 ## 5. Behavior and firmware interface
@@ -284,7 +284,7 @@ Sustained readings above 4.6A mean a panel with a different driver current, a sh
 | U5 | 1 | LM66100DCK | SC-70-6 | ideal diode VCC→+5V; CE→VOUT, ST NC |
 | C17 | 1 | 1µF | 0603 | +5V tap |
 | F1 | 1 | Polyfuse 2920L150/12MR (1.5A hold, 12V) | 2920 | +5V tap: U5 VOUT → J3 |
-| J3 | 1 | screw terminal 5.08mm | THT | +5V (via F1), GND → Portal M3 power terminals |
+| J3 | 1 | Phoenix PT-1,5-2-3.5-H 2-pin 3.5mm screw terminal (Adafruit; hand-soldered) | THT | +5V (via F1), GND → Portal M3 power terminals |
 | U3, U4 | 2 | LMR51450SDRRR | WSON-12 3×3 | PFM + spread spectrum; RT open = 500kHz |
 | L2, L3 | 2 | 4.7µH, 6A RMS, 10A sat | SMD | |
 | C9, C13 | 2 | 100nF 16V | 0603 | BOOT–SW |
@@ -309,7 +309,7 @@ Sustained readings above 4.6A mean a panel with a different driver current, a sh
 | J2 | 1 | JST SH 4-pin (STEMMA QT) | SMD 1mm | GND / +3.3V / /SDA / /SCL |
 | F2, F3 | 2 | Polyfuse 2920L700/12MR (7A hold, 12V) | 2920 | channel feeds: C19/C20 → J4/J5; never on VBUS |
 | C19, C20 | 2 | **Panasonic EEEFPA221XAP** (220µF/10V SMD polymer) | SMD Ø6.3×7.7 → `Capacitor_SMD:CP_Elec_6.3x7.7` | channel bulk on /5V_CH1//5V_CH2 (220µF suffices — panels have their own caps) |
-| J4, J5 | 2 | screw terminal 5.08mm | THT | /5V_CH1, /5V_CH2 panel feeds (via F2/F3) |
+| J4, J5 | 2 | Phoenix PT-1,5-2-3.5-H 2-pin 3.5mm screw terminal (Adafruit; hand-soldered) | THT | /5V_CH1, /5V_CH2 panel feeds (via F2/F3) |
 
 **Value-field convention (done in the latest schematic — cap ratings are in the Value fields: C3/C4 `4.7uF/50V X7R`, C5 `10uF/50V X7R`, C7/C8 `22uF/10V X7R`, C11–C16 `33uF/10V X7R`, C1 `1uF/50V`, C2/C19/C20 full part numbers; small decoupling caps C6/C9/C10/C13/C14/C17/C18/C21/C22 still generic — 16–25V X7R/C0G is fine for them):** originally: put the key rating in the Value field so
 it flows into the BOM and part selection — capacitors get `µF/voltage dielectric` (voltage rating
@@ -407,7 +407,7 @@ with `VBUS` helps isolate nets during bring-up **(suggested)**.
 
 ## 11. Open items before layout
 
-- ✅ **Footprints all assigned** (re-verified 7 Nov 2026): zero empty Footprint fields remain; R/C/L/D/F/J per the table below; J3–J5 = `TerminalBlock_CUI:TB007-508-02`; J2 = JST SH SM04B. Connectivity unchanged vs previous save. Caveat: C5 (10µF) and C7/C8 (22µF) are 0603 — check the LCSC parts' voltage ratings (want ≥25V for C5 on the 20V rail, ≥10V X7R for C7/C8 on the 5V rail; 0603 22µF is usually 6.3V-rated with heavy DC-bias loss — prefer 0805/1206 there).
+- ✅ **Footprints all assigned** (re-verified 7 Nov 2026): zero empty Footprint fields remain; R/C/L/D/F/J per the table below; J3–J5 = `TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal` (Adafruit, hand-soldered); J2 = JST SH BM04B-SRSS-TB. Connectivity unchanged vs previous save. Caveat: C5 (10µF) and C7/C8 (22µF) are 0603 — check the LCSC parts' voltage ratings (want ≥25V for C5 on the 20V rail, ≥10V X7R for C7/C8 on the 5V rail; 0603 22µF is usually 6.3V-rated with heavy DC-bias loss — prefer 0805/1206 there).
 - ✅ Q1 footprint fixed: `AOSP21357:SO8SOP-8L_AOS-L` (wide SOP-8).
 - ✅ Symbol mismatches all resolved (latest save, ERC-verified).
 - ✅ U3 SW pin 1 reconnected (netlist-verified: `Net-(C9-Pad2)` = U3.1/2/3 + C9.2 + L2.1). ✅ All `lib_symbol_mismatch` warnings gone (custom symbols re-synced to the project libs). One cosmetic leftover: a single stray unconnected wire endpoint (1.27mm stub) — delete it in the GUI.
@@ -442,7 +442,7 @@ with `VBUS` helps isolate nets during bring-up **(suggested)**.
 | F1, F2, F3 | 2920L…/12MR PTC | `Fuse:Fuse_2920_7451Metric` |
 | L1, L2, L3 | 4.7µH shielded (MHCI06050-4R7M-R8A for all three) | `Inductor_SMD:L_6.3x6.3_H3` |
 | L2, L3 | 4.7µH, Isat≥6.5A, Irms≥5A (channels) | `Inductor_SMD:L_6.3x6.3_H3` (MHCI06050-4R7M-R8A) |
-| J3, J4, J5 | 2-pin 5.08mm screw terminals | `TerminalBlock_CUI:TerminalBlock_CUI_TB007-508-02_1x02_P5.08mm_Horizontal` (JLCPCB-standard part; if you buy Phoenix MKDS/MSTB instead, use `TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal` to match) |
+| J3, J4, J5 | 2-pin 3.5mm screw terminal, Phoenix PT-1,5-2-3.5-H (Adafruit, hand-soldered — not via JLCPCB) | `TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal` |
 
 Inductor footprints must match the actual inductor parts picked at BOM time (check the LCSC part's datasheet package); same for the radial electrolytics' diameter/pitch.
 
