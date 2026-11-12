@@ -8606,6 +8606,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "VERIFY-JLCPCB-PAGE"
+			(at 215.9 304.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "MHCI06050-4R7M-R8A"
 			(at 260.35 44.45 90)
 			(hide yes)
@@ -8697,6 +8707,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C207092"
+			(at 162.56 538.48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "2920L700/12MR"
 			(at 350.52 187.96 90)
 			(hide yes)
@@ -8729,7 +8749,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -8947,6 +8967,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C96123"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "CL31A476MPHNNNE"
 			(at 140.97 158.75 0)
 			(hide yes)
@@ -8979,7 +9009,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -9276,6 +9306,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C21190"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF1001T5E"
 			(at 278.13 109.22 0)
 			(hide yes)
@@ -9359,6 +9399,16 @@
 		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
 			(at 350.52 215.9 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C207092"
+			(at 134.62 566.42 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9457,6 +9507,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C2297"
+			(at 297.18 469.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 148.59 234.95 0)
 			(hide yes)
@@ -9500,7 +9560,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -9799,6 +9859,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C21190"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF1001T5E"
 			(at 120.65 158.75 0)
 			(hide yes)
@@ -9969,6 +10039,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C96123"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "CL31A476MPHNNNE"
 			(at 129.54 241.3 0)
 			(hide yes)
@@ -10130,6 +10210,16 @@
 		(property "Description" "Resistor"
 			(at 218.44 190.5 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C160590"
+			(at 27.94 408.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10376,6 +10466,16 @@
 		(property "Description" "Light emitting diode"
 			(at 149.86 152.4 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C2297"
+			(at 299.72 304.8 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10641,6 +10741,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C14663"
+			(at -134.62 314.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "CC0603KRX7R9BB104"
 			(at 90.17 224.79 90)
 			(hide yes)
@@ -10725,6 +10835,16 @@
 		(property "Description" "Polarized capacitor"
 			(at 340.36 222.25 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C278407"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10818,6 +10938,16 @@
 		(property "Description" "Polarized capacitor"
 			(at 143.51 45.72 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C525837"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10996,6 +11126,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C96123"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "CL31A476MPHNNNE"
 			(at 129.54 158.75 0)
 			(hide yes)
@@ -11079,6 +11219,16 @@
 		(property "Description" "2A, 1.1MHz Buck DC/DC Converter, fixed 5.0V output voltage, TSOT-23-6"
 			(at 228.6 46.99 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C2071056"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11259,6 +11409,16 @@
 		(property "Description" "Unpolarized capacitor"
 			(at 248.92 170.18 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C14663"
+			(at 78.74 419.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11593,6 +11753,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C23192"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF5103T5E"
 			(at 226.06 109.22 0)
 			(hide yes)
@@ -11762,6 +11932,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C93688"
+			(at 196.85 504.19 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "2920L150/12MR"
 			(at 350.52 153.67 90)
 			(hide yes)
@@ -11845,6 +12025,16 @@
 		(property "Description" "Resistor"
 			(at 218.44 243.84 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C160590"
+			(at -25.4 462.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11943,6 +12133,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C25804"
+			(at -74.93 265.43 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF1002T5E"
 			(at 95.25 170.18 90)
 			(hide yes)
@@ -12031,6 +12231,16 @@
 		(property "Description" "-5.3A Id, -30V Vds, P-Channel MOSFET, 50mOhm Ron, SO-8"
 			(at 130.81 41.91 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C541725"
+			(at 172.72 172.72 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12217,6 +12427,16 @@
 		(property "Description" "Resistor"
 			(at 109.22 52.07 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C23186"
+			(at 57.15 161.29 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12552,6 +12772,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C21190"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF1001T5E"
 			(at 120.65 241.3 0)
 			(hide yes)
@@ -12714,6 +12944,16 @@
 		(property "Description" "Resistor"
 			(at 107.95 158.75 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C23196"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13124,6 +13364,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C14663"
+			(at -52.07 232.41 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "CC0603KRX7R9BB104"
 			(at 90.17 142.24 90)
 			(hide yes)
@@ -13234,7 +13484,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -13367,6 +13617,16 @@
 		(property "Description" "Resistor"
 			(at 266.7 109.22 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C25804"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13535,6 +13795,16 @@
 		(property "Description" "Light emitting diode"
 			(at 273.05 100.33 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C84256"
+			(at 546.1 200.66 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13725,6 +13995,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C25803"
+			(at 464.82 218.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF1003T5E"
 			(at 232.41 109.22 0)
 			(hide yes)
@@ -13817,6 +14097,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C23196"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF5102T5E"
 			(at 107.95 241.3 0)
 			(hide yes)
@@ -13899,6 +14189,16 @@
 		(property "Description" "Unpolarized capacitor"
 			(at 246.38 46.99 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C14663"
+			(at 199.39 293.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14067,6 +14367,16 @@
 		(property "Description" "Inductor"
 			(at 102.87 234.95 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "VERIFY-JLCPCB-PAGE"
+			(at -132.08 337.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14245,6 +14555,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C96123"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "CL31A476MPHNNNE"
 			(at 140.97 241.3 0)
 			(hide yes)
@@ -14330,6 +14650,16 @@
 		(property "Description" "High-Side or Low-Side Measurement, Bi-Directional Current and Power Monitor (0-36V) with I2C Compatible Interface, TSSOP-10 (Texas DGS0010A / VSSOP)"
 			(at 240.03 241.3 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C49851"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14530,6 +14860,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C1663"
+			(at -49.53 280.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "CL10C330JB8NNNC"
 			(at 115.57 165.1 90)
 			(hide yes)
@@ -14613,6 +14953,16 @@
 		(property "Description" "Ideal Diode With Input Polarity Protection 1.5 - 5.5V  Input Voltage, 1.5A Output Current, Ron 141 mOhm, SC-70-6"
 			(at 341.63 63.754 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C2832141"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14804,6 +15154,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C160390"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "BM04B-SRSS-TB"
 			(at 361.95 120.65 0)
 			(hide yes)
@@ -14981,6 +15341,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C22797"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF1302T5E"
 			(at 232.41 128.27 0)
 			(hide yes)
@@ -15065,6 +15435,16 @@
 		(property "Description" "Unpolarized capacitor"
 			(at 273.05 52.07 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C91604"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15242,6 +15622,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C31850"
+			(at 44.45 179.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF2202T5E"
 			(at 111.76 67.31 90)
 			(hide yes)
@@ -15334,6 +15724,16 @@
 					(size 1.27 1.27)
 				)
 				(justify bottom)
+			)
+		)
+		(property "LCSC Part #" "C7095263"
+			(at 78.74 124.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(property "DATASHEET_URL" "https://s3.amazonaws.com/snapeda/datasheet/USB4085-GF-A_Global_Connector_Technology.pdf"
@@ -15579,6 +15979,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C23184"
+			(at 233.68 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF4992T5E"
 			(at 116.84 45.72 0)
 			(hide yes)
@@ -15749,6 +16159,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C15849"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "CL10A105KB8NNNC"
 			(at 327.66 53.34 0)
 			(hide yes)
@@ -15832,6 +16252,16 @@
 		(property "Description" "Resistor"
 			(at 250.19 97.79 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C22976"
+			(at 152.4 347.98 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16088,6 +16518,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C23153"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF3902T5E"
 			(at 226.06 121.92 0)
 			(hide yes)
@@ -16173,6 +16613,16 @@
 		(property "Description" "High-Side or Low-Side Measurement, Bi-Directional Current and Power Monitor (0-36V) with I2C Compatible Interface, TSSOP-10 (Texas DGS0010A / VSSOP)"
 			(at 240.03 187.96 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C49851"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16532,6 +16982,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C7471904"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "HUSB238_002DD"
 			(at 91.44 59.69 0)
 			(hide yes)
@@ -16730,6 +17190,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C4190"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF2201T5E"
 			(at 160.02 240.03 0)
 			(hide yes)
@@ -16813,6 +17283,16 @@
 		(property "Description" "Unpolarized capacitor"
 			(at 83.82 39.37 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C15849"
+			(at 44.45 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16992,6 +17472,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C15849"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "CL10A105KB8NNNC"
 			(at 358.14 49.53 0)
 			(hide yes)
@@ -17160,6 +17650,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C1663"
+			(at -132.08 363.22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "CL10C330JB8NNNC"
 			(at 115.57 247.65 90)
 			(hide yes)
@@ -17192,7 +17692,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -17326,6 +17826,16 @@
 		(property "Description" ""
 			(at 55.88 227.33 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C6890985"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17537,6 +18047,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C278407"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "EEEFPA221XAP"
 			(at 340.36 194.31 0)
 			(hide yes)
@@ -17619,6 +18139,16 @@
 		(property "Description" "Unpolarized capacitor"
 			(at 248.92 223.52 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C14663"
+			(at 25.4 472.44 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17711,6 +18241,16 @@
 		(property "Description" "Unpolarized capacitor"
 			(at 54.61 209.55 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C440198"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17985,7 +18525,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18125,6 +18665,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "VERIFY-JLCPCB-PAGE"
+			(at -49.53 255.27 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "MHCI06050-4R7M-R8A"
 			(at 102.87 152.4 90)
 			(hide yes)
@@ -18218,6 +18768,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C4190"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF2201T5E"
 			(at 160.02 157.48 0)
 			(hide yes)
@@ -18302,6 +18862,16 @@
 		(property "Description" "Unpolarized capacitor"
 			(at 53.34 129.54 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C440198"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18498,7 +19068,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18580,7 +19150,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -18799,6 +19369,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C91604"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "CL21A226MAQNNNE"
 			(at 284.48 52.07 0)
 			(hide yes)
@@ -18971,6 +19551,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C6890985"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "LMR51450SDRRR"
 			(at 55.88 144.78 0)
 			(hide yes)
@@ -19094,6 +19684,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C25804"
+			(at -157.48 347.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "0603WAF1002T5E"
 			(at 95.25 252.73 90)
 			(hide yes)
@@ -19177,6 +19777,16 @@
 		(property "Description" "Resistor"
 			(at 99.06 39.37 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C22859"
+			(at 59.69 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19277,6 +19887,16 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C440198"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(property "Part Number" "GRM21BR61H106KE43L"
 			(at 209.55 52.07 0)
 			(hide yes)
@@ -19309,7 +19929,7 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
@@ -19595,6 +20215,16 @@
 		(property "Description" "Single General-Purpose Voltage Comparator with Open-Collector Output, SOT-23-5"
 			(at 248.92 118.11 0)
 			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C132076"
+			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
