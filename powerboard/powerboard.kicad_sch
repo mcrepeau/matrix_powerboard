@@ -8644,7 +8644,7 @@
 		(dnp no)
 		(uuid "04b4fe91-45ea-42f0-9bc4-c3eb76d6391c")
 		(property "Reference" "F2"
-			(at 350.52 184.658 90)
+			(at 352.044 182.118 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8653,7 +8653,7 @@
 				)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "2920L700/12MR"
 			(at 345.186 184.15 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9314,7 +9314,7 @@
 		(dnp no)
 		(uuid "151f84b1-107a-4b2b-a41a-2659cea909f3")
 		(property "Reference" "F3"
-			(at 350.52 212.598 90)
+			(at 350.774 209.804 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9323,8 +9323,8 @@
 				)
 			)
 		)
-		(property "Value" ""
-			(at 345.186 212.598 90)
+		(property "Value" "2920L700/12MR"
+			(at 344.17 212.09 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9517,7 +9517,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TERM BLK 2POS SIDE ENT 3.5MM"
+		(property "Value" "Terminal Block - 2-pin 3.5mm"
 			(at 365.76 190.4999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10952,7 +10952,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47µF/10v"
+		(property "Value" "47µF/10V"
 			(at 131.318 165.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11709,7 +11709,7 @@
 		(dnp no)
 		(uuid "4d8af95c-bf52-4e8f-88f7-b13bc7751499")
 		(property "Reference" "F1"
-			(at 350.52 150.368 90)
+			(at 350.52 147.574 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11718,8 +11718,8 @@
 				)
 			)
 		)
-		(property "Value" ""
-			(at 353.314 149.86 90)
+		(property "Value" "2920L150/12MR"
+			(at 357.378 149.86 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14804,6 +14804,17 @@
 				)
 			)
 		)
+		(property "Part Number" "BM04B-SRSS-TB"
+			(at 361.95 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "4"
 			(uuid "0cdd24ca-1e65-4a73-9011-5611ecc9d7ea")
 		)
@@ -15279,7 +15290,7 @@
 				)
 			)
 		)
-		(property "Value" "USB4085-GF-A_REVA4"
+		(property "Value" "USB4085-GF-A"
 			(at 39.37 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15419,6 +15430,17 @@
 					(size 1.27 1.27)
 				)
 				(justify bottom)
+			)
+		)
+		(property "Part Number" "USB4085-GF-A"
+			(at 39.37 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "A5"
@@ -17980,7 +18002,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TERM BLK 2POS SIDE ENT 3.5MM"
+		(property "Value" "Terminal Block - 2-pin 3.5mm"
 			(at 365.76 218.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18493,7 +18515,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TERM BLK 2POS SIDE ENT 3.5MM"
+		(property "Value" "Terminal Block - 2-pin 3.5mm"
 			(at 365.76 156.2099 0)
 			(show_name no)
 			(do_not_autoplace no)
