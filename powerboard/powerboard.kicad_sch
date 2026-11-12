@@ -7313,7 +7313,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 162.56) (xy 160.02 167.64)
+			(xy 160.02 161.29) (xy 160.02 166.37)
 		)
 		(stroke
 			(width 0)
@@ -7713,7 +7713,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 245.11) (xy 160.02 250.19)
+			(xy 160.02 243.84) (xy 160.02 248.92)
 		)
 		(stroke
 			(width 0)
@@ -7923,7 +7923,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 154.94) (xy 160.02 152.4)
+			(xy 160.02 153.67) (xy 160.02 152.4)
 		)
 		(stroke
 			(width 0)
@@ -8283,7 +8283,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 237.49) (xy 160.02 234.95)
+			(xy 160.02 236.22) (xy 160.02 234.95)
 		)
 		(stroke
 			(width 0)
@@ -8871,7 +8871,7 @@
 		(dnp no)
 		(uuid "0da3ce1c-242a-4219-bc6e-9f760d0a2099")
 		(property "Reference" "C12"
-			(at 144.018 158.75 0)
+			(at 144.018 159.512 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8881,8 +8881,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "33uF/10V X7R"
-			(at 144.018 161.798 0)
+		(property "Value" "47µF/10V"
+			(at 144.018 162.306 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8915,6 +8915,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 140.97 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CL31A476MPHNNNE"
 			(at 140.97 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -9348,10 +9359,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "15495e59-b237-47fa-817f-f0a8be7f1869")
 		(property "Reference" "D3"
-			(at 150.1775 227.33 0)
+			(at 146.304 227.076 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9370,7 +9380,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 148.59 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -9404,6 +9414,17 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 148.59 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "KT-0805G"
 			(at 148.59 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -9839,7 +9860,7 @@
 		(dnp no)
 		(uuid "211ab91e-d88f-41f1-bf7c-a844a6f0ab5b")
 		(property "Reference" "C15"
-			(at 131.064 244.348 0)
+			(at 131.064 244.856 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9849,8 +9870,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "33uF/10V X7R"
-			(at 131.064 246.634 0)
+		(property "Value" "47µF/10V"
+			(at 131.064 247.396 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9883,6 +9904,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 129.54 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CL31A476MPHNNNE"
 			(at 129.54 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -10232,10 +10264,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "2cf4e9d5-d83d-4409-bad8-ca7adeeb655b")
 		(property "Reference" "D2"
-			(at 151.4475 144.78 0)
+			(at 147.32 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10254,7 +10285,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 149.86 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -10288,6 +10319,17 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 149.86 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "KT-0805G"
 			(at 149.86 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -10479,10 +10521,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "37c90bc5-1967-48e0-8f7e-bbd86c59644f")
 		(property "Reference" "C13"
-			(at 90.17 217.17 90)
+			(at 89.154 217.17 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10492,7 +10533,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 90.17 219.71 90)
+			(at 90.424 219.71 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10525,6 +10566,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 90.17 224.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CC0603KRX7R9BB104"
+			(at 90.17 224.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10571,8 +10623,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EEEFPA221XAP"
-			(at 323.088 222.504 0)
+		(property "Value" "220µF/10V"
+			(at 325.628 222.25 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10605,6 +10657,17 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
+			(at 340.36 222.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "EEEFPA221XAP"
 			(at 340.36 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -10653,7 +10716,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EMVH350ARA101MHA0G"
+		(property "Value" "100µF/35V"
 			(at 147.32 46.1009 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10687,6 +10750,17 @@
 			)
 		)
 		(property "Description" "Polarized capacitor"
+			(at 143.51 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "EMVH350ARA101MHA0G"
 			(at 143.51 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -10812,8 +10886,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "33uF/10V X7R"
-			(at 131.318 164.592 0)
+		(property "Value" "47µF/10v"
+			(at 131.318 165.1 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10846,6 +10920,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 129.54 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CL31A476MPHNNNE"
 			(at 129.54 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -11051,10 +11136,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "464ecdaa-1129-46b4-b758-16f4a720061b")
 		(property "Reference" "C21"
-			(at 248.92 162.56 90)
+			(at 247.396 162.56 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11063,8 +11147,8 @@
 				)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 248.92 165.1 90)
+		(property "Value" "100nF"
+			(at 248.666 165.1 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11097,6 +11181,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 248.92 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CC0603KRX7R9BB104"
+			(at 248.92 170.18 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12724,7 +12819,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 160.02 167.64 0)
+		(at 160.02 166.37 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12735,7 +12830,7 @@
 		(fields_autoplaced yes)
 		(uuid "69356d70-6238-42a9-8cf3-14c02b974a04")
 		(property "Reference" "#PWR048"
-			(at 160.02 173.99 0)
+			(at 160.02 172.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12746,7 +12841,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 160.02 172.72 0)
+			(at 160.02 171.45 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12756,7 +12851,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 167.64 0)
+			(at 160.02 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12767,7 +12862,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 167.64 0)
+			(at 160.02 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12778,7 +12873,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 160.02 167.64 0)
+			(at 160.02 166.37 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12810,10 +12905,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "6a55204c-c0cf-45aa-bb1f-d58f222d061b")
 		(property "Reference" "C9"
-			(at 90.17 134.62 90)
+			(at 88.392 134.62 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12823,7 +12917,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 90.17 137.16 90)
+			(at 90.17 136.906 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12856,6 +12950,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 90.17 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CC0603KRX7R9BB104"
+			(at 90.17 142.24 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13208,10 +13313,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "70a4a753-f868-45f7-915b-1518201b9330")
 		(property "Reference" "D1"
-			(at 274.6375 92.71 0)
+			(at 272.288 92.964 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13221,7 +13325,7 @@
 			)
 		)
 		(property "Value" "RED LED"
-			(at 274.6375 95.25 0)
+			(at 275.082 95.504 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13230,7 +13334,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 273.05 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -13264,6 +13368,17 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 273.05 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "NCD0805R1"
 			(at 273.05 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -13542,7 +13657,7 @@
 		(dnp no)
 		(uuid "7cb131d4-e598-4532-98b5-8e5049b6fa92")
 		(property "Reference" "C6"
-			(at 241.3 40.386 90)
+			(at 246.38 51.308 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13551,8 +13666,8 @@
 				)
 			)
 		)
-		(property "Value" "100nF"
-			(at 243.078 42.418 90)
+		(property "Value" "100nF/50V"
+			(at 250.444 53.594 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13585,6 +13700,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 246.38 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CC0603KRX7R9BB104"
+			(at 246.38 46.99 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13856,7 +13982,7 @@
 		(dnp no)
 		(uuid "85704b27-30d2-49e4-ac94-2d25ff38b888")
 		(property "Reference" "C16"
-			(at 143.764 241.046 0)
+			(at 143.764 242.062 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13866,8 +13992,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "33uF/10V X7R"
-			(at 143.764 243.586 0)
+		(property "Value" "47µF/10V"
+			(at 143.764 244.602 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13900,6 +14026,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 140.97 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CL31A476MPHNNNE"
 			(at 140.97 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -14130,8 +14267,8 @@
 				)
 			)
 		)
-		(property "Value" "CL10C330JB8NNNC"
-			(at 118.364 169.418 90)
+		(property "Value" "33pF"
+			(at 120.65 169.418 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14164,6 +14301,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 115.57 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CL10C330JB8NNNC"
+			(at 115.57 165.1 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14618,7 +14766,7 @@
 		(dnp no)
 		(uuid "933db6c2-9582-4503-80b6-b7842ef5b914")
 		(property "Reference" "C7"
-			(at 267.462 52.324 0)
+			(at 267.462 54.102 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14628,8 +14776,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CL21A226MAQNNNE"
-			(at 251.714 54.61 0)
+		(property "Value" "22µF/25V"
+			(at 260.35 56.642 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14662,6 +14810,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 273.05 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CL21A226MAQNNNE"
 			(at 273.05 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -15248,10 +15407,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "a00a1b36-3195-4fef-8545-b9ff1fae07c6")
 		(property "Reference" "C18"
-			(at 331.47 52.0699 0)
+			(at 320.802 53.848 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15261,8 +15419,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
-			(at 331.47 54.6099 0)
+		(property "Value" "1µF/50V"
+			(at 315.976 56.388 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -15295,6 +15453,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 327.66 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CL10A105KB8NNNC"
 			(at 327.66 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -16166,7 +16335,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 160.02 241.3 0)
+		(at 160.02 240.03 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -16177,7 +16346,7 @@
 		(fields_autoplaced yes)
 		(uuid "bbfc19a3-e6cf-438a-9e21-0a9fe04fa5e8")
 		(property "Reference" "R19"
-			(at 162.56 240.0299 0)
+			(at 162.56 238.7599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16187,8 +16356,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 162.56 242.5699 0)
+		(property "Value" "2.2k"
+			(at 162.56 241.2999 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16199,7 +16368,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 158.242 241.3 90)
+			(at 158.242 240.03 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16210,7 +16379,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 241.3 0)
+			(at 160.02 240.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16221,7 +16390,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 160.02 241.3 0)
+			(at 160.02 240.03 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16268,7 +16437,7 @@
 				)
 			)
 		)
-		(property "Value" "1uF/50V"
+		(property "Value" "1µF/50V"
 			(at 83.82 34.29 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16302,6 +16471,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 83.82 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CL10A105KB8NNNC"
+			(at 83.82 39.37 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16427,7 +16607,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
+		(property "Value" "1µF/50V"
 			(at 361.95 50.7999 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16461,6 +16641,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 358.14 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CL10A105KB8NNNC"
 			(at 358.14 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -16585,8 +16776,8 @@
 				)
 			)
 		)
-		(property "Value" "CL10C330JB8NNNC"
-			(at 117.856 251.968 90)
+		(property "Value" "33pF"
+			(at 120.65 251.968 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16619,6 +16810,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 115.57 247.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CL10C330JB8NNNC"
+			(at 115.57 247.65 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16939,8 +17141,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EEEFPA221XAP"
-			(at 322.834 194.564 0)
+		(property "Value" "220µF/10V"
+			(at 325.12 194.31 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16983,6 +17185,17 @@
 				)
 			)
 		)
+		(property "Part Number" "EEEFPA221XAP"
+			(at 340.36 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0212f7e0-7dd6-459d-9461-0de94715a119")
 		)
@@ -17008,10 +17221,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "d003f976-0231-4644-a9aa-2f8d75fb09c7")
 		(property "Reference" "C22"
-			(at 248.92 215.9 90)
+			(at 248.158 215.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17020,8 +17232,8 @@
 				)
 			)
 		)
-		(property "Value" "0.1uF"
-			(at 248.92 218.44 90)
+		(property "Value" "100nF"
+			(at 249.428 218.186 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17054,6 +17266,17 @@
 		)
 		(property "Description" "Unpolarized capacitor"
 			(at 248.92 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CC0603KRX7R9BB104"
+			(at 248.92 223.52 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17100,8 +17323,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7uF/50V X7R"
-			(at 36.068 210.566 0)
+		(property "Value" "4.7µF/50V"
+			(at 40.386 210.566 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17134,6 +17357,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 54.61 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "GRM21BR61H106KE43L"
 			(at 54.61 209.55 0)
 			(hide yes)
 			(show_name no)
@@ -17317,7 +17551,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 160.02 250.19 0)
+		(at 160.02 248.92 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17328,7 +17562,7 @@
 		(fields_autoplaced yes)
 		(uuid "d693ca45-91e4-4c31-a7a5-b97e112f1c9b")
 		(property "Reference" "#PWR049"
-			(at 160.02 256.54 0)
+			(at 160.02 255.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17339,7 +17573,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 160.02 255.27 0)
+			(at 160.02 254 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17349,7 +17583,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 250.19 0)
+			(at 160.02 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17360,7 +17594,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 250.19 0)
+			(at 160.02 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17371,7 +17605,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 160.02 250.19 0)
+			(at 160.02 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17556,7 +17790,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 160.02 158.75 0)
+		(at 160.02 157.48 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17567,7 +17801,7 @@
 		(fields_autoplaced yes)
 		(uuid "d99e541c-a104-4300-89af-3954e6bec20b")
 		(property "Reference" "R18"
-			(at 162.56 157.4799 0)
+			(at 162.56 156.2099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17577,8 +17811,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
-			(at 162.56 160.0199 0)
+		(property "Value" "2.2k"
+			(at 162.56 158.7499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17589,7 +17823,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 158.242 158.75 90)
+			(at 158.242 157.48 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17600,7 +17834,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 158.75 0)
+			(at 160.02 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17611,7 +17845,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 160.02 158.75 0)
+			(at 160.02 157.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17658,8 +17892,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4.7uF/50V X7R"
-			(at 34.29 130.048 0)
+		(property "Value" "4.7µF/50V"
+			(at 38.608 130.302 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17692,6 +17926,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 53.34 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "GRM21BR61H106KE43L"
 			(at 53.34 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -18136,7 +18381,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "CL21A226MAQNNNE"
+		(property "Value" "22µF/25V"
 			(at 288.29 53.3399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18170,6 +18415,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 284.48 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "CL21A226MAQNNNE"
 			(at 284.48 52.07 0)
 			(hide yes)
 			(show_name no)
@@ -18570,8 +18826,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10uF/50V X7R"
-			(at 191.008 52.324 0)
+		(property "Value" "10µF/50V"
+			(at 195.326 52.324 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18581,7 +18837,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 210.5152 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -18604,6 +18860,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 209.55 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "GRM21BR61H106KE43L"
 			(at 209.55 52.07 0)
 			(hide yes)
 			(show_name no)
