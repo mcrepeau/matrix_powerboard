@@ -8563,7 +8563,7 @@
 				)
 			)
 		)
-		(property "Value" "MHCI06050-4R7M-R8A"
+		(property "Value" "4.7µH"
 			(at 260.35 41.91 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8606,6 +8606,17 @@
 				)
 			)
 		)
+		(property "Part Number" "MHCI06050-4R7M-R8A"
+			(at 260.35 44.45 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "95be74aa-1224-43ae-a5fa-be797c7cd33b")
 		)
@@ -8633,7 +8644,7 @@
 		(dnp no)
 		(uuid "04b4fe91-45ea-42f0-9bc4-c3eb76d6391c")
 		(property "Reference" "F2"
-			(at 352.044 181.864 90)
+			(at 350.52 184.658 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8642,7 +8653,7 @@
 				)
 			)
 		)
-		(property "Value" "2920L700/12MR"
+		(property "Value" ""
 			(at 345.186 184.15 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8677,6 +8688,17 @@
 		)
 		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
 			(at 350.52 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "2920L700/12MR"
+			(at 350.52 187.96 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9281,7 +9303,7 @@
 		(dnp no)
 		(uuid "151f84b1-107a-4b2b-a41a-2659cea909f3")
 		(property "Reference" "F3"
-			(at 351.79 210.312 90)
+			(at 350.52 212.598 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9290,7 +9312,7 @@
 				)
 			)
 		)
-		(property "Value" "2920L700/12MR"
+		(property "Value" ""
 			(at 345.186 212.598 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9325,6 +9347,17 @@
 		)
 		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
 			(at 350.52 215.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "2920L700/12MR"
+			(at 350.52 215.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10978,7 +11011,7 @@
 				)
 			)
 		)
-		(property "Value" "AP63205WU"
+		(property "Value" "AP63205"
 			(at 228.6 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11011,6 +11044,17 @@
 			)
 		)
 		(property "Description" "2A, 1.1MHz Buck DC/DC Converter, fixed 5.0V output voltage, TSOT-23-6"
+			(at 228.6 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "AP63205WU-7"
 			(at 228.6 46.99 0)
 			(hide yes)
 			(show_name no)
@@ -11621,7 +11665,7 @@
 		(dnp no)
 		(uuid "4d8af95c-bf52-4e8f-88f7-b13bc7751499")
 		(property "Reference" "F1"
-			(at 350.52 147.32 90)
+			(at 350.52 150.368 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11630,7 +11674,7 @@
 				)
 			)
 		)
-		(property "Value" "2920L150/12MR"
+		(property "Value" ""
 			(at 353.314 149.86 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11665,6 +11709,17 @@
 		)
 		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
 			(at 350.52 153.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "2920L150/12MR"
+			(at 350.52 153.67 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11908,6 +11963,17 @@
 			)
 		)
 		(property "Description" "-5.3A Id, -30V Vds, P-Channel MOSFET, 50mOhm Ron, SO-8"
+			(at 130.81 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "AOSP21357"
 			(at 130.81 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -13834,8 +13900,8 @@
 				)
 			)
 		)
-		(property "Value" "MHCI06050-4R7M-R8A"
-			(at 111.76 232.41 90)
+		(property "Value" "4.7µH"
+			(at 103.124 232.156 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13868,6 +13934,17 @@
 		)
 		(property "Description" "Inductor"
 			(at 102.87 234.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "MHCI06050-4R7M-R8A"
+			(at 102.87 234.95 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14085,7 +14162,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "INA226AIDGSR"
+		(property "Value" "INA226"
 			(at 242.1733 228.6 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14119,6 +14196,17 @@
 			)
 		)
 		(property "Description" "High-Side or Low-Side Measurement, Bi-Directional Current and Power Monitor (0-36V) with I2C Compatible Interface, TSSOP-10 (Texas DGS0010A / VSSOP)"
+			(at 240.03 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "INA226AIDGSR"
 			(at 240.03 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -14358,7 +14446,7 @@
 				)
 			)
 		)
-		(property "Value" "LM66100DCK"
+		(property "Value" "LM66100"
 			(at 341.63 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14392,6 +14480,17 @@
 		)
 		(property "Description" "Ideal Diode With Input Polarity Protection 1.5 - 5.5V  Input Voltage, 1.5A Output Current, Ron 141 mOhm, SC-70-6"
 			(at 341.63 63.754 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "LM66100DCK"
+			(at 341.63 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15829,7 +15928,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "INA226AIDGSR"
+		(property "Value" "INA226"
 			(at 242.1733 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15863,6 +15962,17 @@
 			)
 		)
 		(property "Description" "High-Side or Low-Side Measurement, Bi-Directional Current and Power Monitor (0-36V) with I2C Compatible Interface, TSSOP-10 (Texas DGS0010A / VSSOP)"
+			(at 240.03 187.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "INA226AIDGSR"
 			(at 240.03 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -16169,7 +16279,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "HUSB238_002DD"
+		(property "Value" "HUSB238"
 			(at 93.5833 46.99 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16204,6 +16314,17 @@
 		)
 		(property "Description" "USB-PD Sink IC Port Controller, VBUS = 3..25V, USB Type-C rev. 1.4, USB-PD rev. 3.0, BC1.2, WDFN-10 / WSON-10"
 			(at 85.09 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "HUSB238_002DD"
+			(at 91.44 59.69 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16947,7 +17068,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LMR51450SDRRR"
+		(property "Value" "LMR51450"
 			(at 80.772 212.598 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16983,6 +17104,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 55.88 227.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "LMR51450SDRRR"
 			(at 55.88 227.33 0)
 			(hide yes)
 			(show_name no)
@@ -17721,7 +17853,7 @@
 		(dnp no)
 		(uuid "d8806461-3e91-4d1c-acdf-7a02a8649538")
 		(property "Reference" "L2"
-			(at 99.822 147.574 90)
+			(at 99.568 147.066 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17730,8 +17862,8 @@
 				)
 			)
 		)
-		(property "Value" "MHCI06050-4R7M-R8A"
-			(at 109.982 149.86 90)
+		(property "Value" "4.7µH"
+			(at 101.346 149.606 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17764,6 +17896,17 @@
 		)
 		(property "Description" "Inductor"
 			(at 102.87 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "MHCI06050-4R7M-R8A"
+			(at 102.87 152.4 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18551,7 +18694,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LMR51450SDRRR"
+		(property "Value" "LMR51450"
 			(at 79.248 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18587,6 +18730,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 55.88 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "LMR51450SDRRR"
 			(at 55.88 144.78 0)
 			(hide yes)
 			(show_name no)
@@ -19153,7 +19307,7 @@
 				)
 			)
 		)
-		(property "Value" "LM397MFX"
+		(property "Value" "LM397"
 			(at 254 112.522 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19186,6 +19340,17 @@
 			)
 		)
 		(property "Description" "Single General-Purpose Voltage Comparator with Open-Collector Output, SOT-23-5"
+			(at 248.92 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "LM397MFX"
 			(at 248.92 118.11 0)
 			(hide yes)
 			(show_name no)
