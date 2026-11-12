@@ -9276,6 +9276,17 @@
 				)
 			)
 		)
+		(property "Part Number" "0603WAF1001T5E"
+			(at 278.13 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "aa28c02a-8522-4420-a4e5-4d115b99e4b5")
 		)
@@ -9788,6 +9799,17 @@
 				)
 			)
 		)
+		(property "Part Number" "0603WAF1001T5E"
+			(at 120.65 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "17cca536-6c7a-49c3-aad7-649ddb2ada6a")
 		)
@@ -10073,7 +10095,7 @@
 				)
 			)
 		)
-		(property "Value" "RLP25FEER002"
+		(property "Value" "2mΩ 1% ≥1W"
 			(at 218.44 186.69 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10107,6 +10129,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 218.44 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "RLP25FEER002"
+			(at 218.44 190.5 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11516,7 +11549,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "820k"
+		(property "Value" "510k"
 			(at 218.186 110.236 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11550,6 +11583,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 226.06 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF5103T5E"
 			(at 226.06 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -11766,7 +11810,7 @@
 				)
 			)
 		)
-		(property "Value" "RLP25FEER002"
+		(property "Value" "2mΩ 1% ≥1W"
 			(at 218.44 240.03 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11800,6 +11844,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 218.44 243.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "RLP25FEER002"
+			(at 218.44 243.84 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11845,8 +11900,8 @@
 				)
 			)
 		)
-		(property "Value" "19.1k 1%"
-			(at 96.52 176.276 90)
+		(property "Value" "10k 1%"
+			(at 95.758 175.514 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11879,6 +11934,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 95.25 170.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF1002T5E"
+			(at 95.25 170.18 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12107,7 +12173,7 @@
 		(dnp no)
 		(uuid "55531e11-9038-441c-ab74-751126ce0db9")
 		(property "Reference" "R3"
-			(at 111.252 47.244 90)
+			(at 108.712 46.99 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12117,7 +12183,7 @@
 			)
 		)
 		(property "Value" "5.1K"
-			(at 111.76 49.53 90)
+			(at 109.474 49.276 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12150,6 +12216,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 109.22 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF5101T5E"
+			(at 109.22 52.07 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12475,6 +12552,17 @@
 				)
 			)
 		)
+		(property "Part Number" "0603WAF1001T5E"
+			(at 120.65 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a0e931f6-79b2-4b12-b84e-f4c5ba92b3bc")
 		)
@@ -12590,8 +12678,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k 1%"
-			(at 96.774 160.528 0)
+		(property "Value" "51k 1%"
+			(at 98.044 160.274 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12624,6 +12712,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 107.95 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF5102T5E"
 			(at 107.95 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -13276,6 +13375,17 @@
 				)
 			)
 		)
+		(property "Part Number" "0603WAF1002T5E"
+			(at 266.7 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a667452b-8e3c-48f9-a420-79d37aef82f8")
 		)
@@ -13571,7 +13681,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "115k"
+		(property "Value" "100k"
 			(at 234.95 110.4899 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13605,6 +13715,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 232.41 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF1003T5E"
 			(at 232.41 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -13652,8 +13773,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k 1%"
-			(at 97.028 242.57 0)
+		(property "Value" "51k 1%"
+			(at 98.298 242.57 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13686,6 +13807,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 107.95 241.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF5102T5E"
 			(at 107.95 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -14794,7 +14926,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "13k"
 			(at 234.95 129.5399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14828,6 +14960,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 232.41 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF1302T5E"
 			(at 232.41 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -15032,7 +15175,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "98affec1-1506-49eb-b1da-97b78ff4ce40")
 		(property "Reference" "R4"
@@ -15045,7 +15188,7 @@
 				)
 			)
 		)
-		(property "Value" "22.6K 1%"
+		(property "Value" "22k 1%"
 			(at 111.76 63.5 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15079,6 +15222,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 111.76 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF2202T5E"
+			(at 111.76 67.31 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15403,6 +15557,17 @@
 				)
 			)
 		)
+		(property "Part Number" "0603WAF4992T5E"
+			(at 116.84 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "572d22f2-4de1-4c08-bc72-e8beba8dda5d")
 		)
@@ -15610,7 +15775,7 @@
 				)
 			)
 		)
-		(property "Value" "10M"
+		(property "Value" "2M"
 			(at 250.19 93.98 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15644,6 +15809,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 250.19 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF2004T5E"
+			(at 250.19 97.79 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15846,7 +16022,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "43k"
+		(property "Value" "39k"
 			(at 219.456 122.682 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -15880,6 +16056,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 226.06 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF3902T5E"
 			(at 226.06 121.92 0)
 			(hide yes)
 			(show_name no)
@@ -16511,6 +16698,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 160.02 240.03 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF2201T5E"
 			(at 160.02 240.03 0)
 			(hide yes)
 			(show_name no)
@@ -17998,6 +18196,17 @@
 				)
 			)
 		)
+		(property "Part Number" "0603WAF2201T5E"
+			(at 160.02 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "bad0f873-ce3b-45c0-b8cd-47c2e83bd8ea")
 		)
@@ -18820,8 +19029,8 @@
 				)
 			)
 		)
-		(property "Value" "19.1k 1%"
-			(at 98.044 259.08 90)
+		(property "Value" "10k 1%"
+			(at 97.282 258.572 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -18854,6 +19063,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 95.25 252.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF1002T5E"
+			(at 95.25 252.73 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18934,6 +19154,17 @@
 		)
 		(property "Description" "Resistor"
 			(at 99.06 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Part Number" "0603WAF100JT5E"
+			(at 99.06 39.37 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
