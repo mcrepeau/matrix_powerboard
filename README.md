@@ -12,18 +12,15 @@ HUB75 data lines, the board supplies the panel power externally.
 - **[DESIGN.md](hardware/DESIGN.md)** — full design rationale, net list, per-pin hookup tables, component-selection rationale, layout and
   safety notes, open items. Source of truth for the schematic.
 
-## Architecture (as built, Rev A)
+## Connections
 
 ```
-USB-C J1 ──► VBUS ──► Q1 AOSP21357 PMOS (HUSB238 GATE-driven OVP switch) ──► VDC (switched 20V rail, C2 100µF)
-   │  └─ R1 10Ω ─► U1 HUSB238 VIN + C1 (straps: VSET open = 20V, ISET R4 22.6k = 3A, I2C 0x08)
-   │
-VDC ─┬─► U2 AP63205 ──► VCC ──► U5 LM66100 ──► +5V ──► F1 ──► J3 → Portal M3 power terminals (≤1A)
-     ├─► U3 LMR51450SDRRR CH1: SW ── L2 ──► +5VA ──► R_SH1 ──► /5V_CH1 ──► C19 ──► F2 ──► J4 (panels 1–2)
-     ├─► U4 LMR51450SDRRR CH2: SW ── L3 ──► +5VD ──► R_SH2 ──► /5V_CH2 ──► C20 ──► F3 ──► J5 (panels 3–4)
-     │            both EN = /POW_EN; U7/U8 INA226 (0x40/0x44) Kelvin-sense across R_SH1/R_SH2, on QT I2C
-     └─► R13/R14 divider ──► U6 LM397 (IN+ vs 0.4V ref from R8/R9) ──► OUT + R17 pull-up = /POW_EN
-            D1 red LED on /POW_EN (input invalid); D2/D3 green per channel
+USB-C adapter ──► PowerBoard USB-C connector (J1) ──► D1 red LED on /POW_EN (input invalid); D2/D3 green per channel
+					└─ I2C connector (J2) ─► Adafruit MatrixPortal I2C connector
+					└─ Screw terminals (J3) ─► Adafruit MatrixPortal power terminals (≤1A)
+					└─ Screw terminals (J4) ─► HUB75 panels 1-2 (<5A)
+					└─ Screw terminals (J5) ─► HUB75 panels 3-4 (<5A)
+          
 ```
 
 Portal links: **J3** (5V tap, ≤1A, to the M3 power screw terminals) and **J2** STEMMA QT
@@ -31,7 +28,7 @@ Portal links: **J3** (5V tap, ≤1A, to the M3 power screw terminals) and **J2**
 connect its 5V pins. There is no CH_EN/PG line: channels are gated purely by the supervisor
 (input ≥ ≈8V ⇒ `/POW_EN` high). Panel power plugs are not reverse-protected — observe polarity.
 
-## Behavior in one table
+## Behavior
 
 | Condition | Input | D1 (red) | D2/D3 (green) | Channels | Firmware |
 |---|---|---|---|---|---|
@@ -41,7 +38,7 @@ connect its 5V pins. There is no CH_EN/PG line: channels are gated purely by the
 | Dumb 5V source | ≈5V | **on** | off | off | Portal may still boot; report missing contract |
 | Unplugged | 0V | off | off | off | — |
 
-## Firmware interface (summary)
+## Firmware interface
 
 I2C on the QT bus (3.3V): HUSB238 **0x08** (source caps / negotiated contract / PDO select),
 INA226 **0x40** (ch1) and **0x44** (ch2) — program CAL (0x05) at boot, alert ≈4.8A via Mask/Enable 0x06.
