@@ -3,3 +3,4 @@ hardware/gerber/
 *.kicad_prl
 *.lck
 *.zip
+*.bak*
