@@ -67,7 +67,7 @@ panel power). The J1 shell (S1–S4) ties to GND.
 
 ## 4. Schematic hookup (per sheet)
 
-Reference designators are the ones on the schematic; the BOM is in section 6. Pin names refer
+Reference designators are the ones on the schematic; the orderable BOM is `powerboard.csv` (rationale in section 6). Pin names refer
 to datasheet function names.
 
 ### Sheet 1: Input (USB-C, PD sink, OVP switch, bulk)
@@ -261,79 +261,54 @@ set CAL and enable the over-current alert at boot.
 The governor is an anomaly detector and thermal backstop, not a normal-operation limiter.
 Sustained readings above 4.6A mean a panel with a different driver current, a short or a wiring fault.
 
-## 6. Bill of materials
+## 6. Component selection (rationale — not a parts list)
 
-| Ref | Qty | Part / value | Package | Notes |
-|---|---|---|---|---|
-| J1 | 1 | USB-C receptacle USB4085-GF-A_REVA4 | SMD+THT | shell to GND |
-| U1 | 1 | HUSB238_002DD | DFN-10L 3×3 | VSET open = 20V; ISET R4 22.6k = 3A |
-| R1 | 1 | 10Ω | 0603 | VIN series R (datasheet typical) |
-| R2 | 1 | 49.9kΩ | 0603 | Q1 gate pull-up (datasheet typical) |
-| R3 | 1 | 5.1kΩ | 0603 | GATE series R (datasheet typical) |
-| R4 | 1 | 22.6kΩ 1% | 0603 | ISET = 3A |
-| C1 | 1 | 1µF 50V | 0603/0805 | at U1 VIN |
-| Q1 | 1 | AOSP21357 | SOP-8 wide | PMOS OVP switch VBUS→VDC, ±25V gate; **footprint: use AOSP21357:SO8SOP-8L_AOS, not narrow SOIC-8 (open item)** |
-| U2 | 1 | AP63205WU-7 | TSOT26 | fixed 5V |
-| L1 | 1 | 4.7µH, ≥2.7A, DCR<100mΩ | SMD | SW→VCC |
-| C2 | 1 | **Chemi-Con EMVH350ARA101MHA0G** (100µF/35V SMD polymer) | SMD Ø8×10 → `Capacitor_SMD:CP_Elec_8x10` | VDC bulk at the buck VIN cluster |
-| C3, C4 | 2 | 4.7µF 50V X7R | SMD | VDC ceramics |
-| C5 | 1 | 10µF 50V | SMD | U2 VIN |
-| C6 | 1 | 100nF | 0603 | BST–SW |
-| C7, C8 | 2 | 22µF | | VCC |
-| C18 | 1 | 1µF | 0603 | VCC |
-| U5 | 1 | LM66100DCK | SC-70-6 | ideal diode VCC→+5V; CE→VOUT, ST NC |
-| C17 | 1 | 1µF | 0603 | +5V tap |
-| F1 | 1 | Polyfuse 2920L150/12MR (1.5A hold, 12V) | 2920 | +5V tap: U5 VOUT → J3 |
-| J3 | 1 | Phoenix PT-1,5-2-3.5-H 2-pin 3.5mm screw terminal (Adafruit; hand-soldered) | THT | +5V (via F1), GND → Portal M3 power terminals |
-| U3, U4 | 2 | LMR51450SDRRR | WSON-12 3×3 | PFM + spread spectrum; RT open = 500kHz |
-| L2, L3 | 2 | 4.7µH, 6A RMS, 10A sat | SMD | |
-| C9, C13 | 2 | 100nF 16V | 0603 | BOOT–SW |
-| C10, C14 | 2 | 33pF | 0603 | feedforward |
-| C11, C12, C15, C16 | 4 | 33µF | | channel outputs, pre-shunt |
-| R5, R11 | 2 | 100kΩ 1% | 0603 | FB top |
-| R6, R10 | 2 | 19.1kΩ 1% | 0603 | FB bottom → ≈4.99V |
-| R7, R12 | 2 | 1kΩ | 0603 | feedforward |
-| U6 | 1 | **LM397** (alt LM393DR2G) | SOT-23-5 | open-collector OUT + R17 pull-up; Vref divider R8/R9; R16 hysteresis |
-| R13 | 1 | 820kΩ 1% | 0603 | divider top |
-| R14 | 1 | 43kΩ 1% | 0603 | divider bottom → ≈8.0V threshold @ 400mV ref |
-| R17 | 1 | 10kΩ | 0603 | /POW_EN pull-up to VCC |
-| R15 | 1 | 1kΩ | 0603 | D1 series |
-| D1 | 1 | LED (red/amber) | 0603/0805 | fault LED, on when /POW_EN low |
-| D2, D3 | 2 | LED (green) | 0603/0805 | channel power-available, on `+5VA`//`+5VD` via R18/R19 |
-| R18, R19 | 2 | 10kΩ (as drawn; 2.2–4.7k for brighter) | 0603 | D2/D3 series |
-| U7, U8 | 2 | **INA226** | VSSOP-10 | 0x40 / 0x44; needs external shunt + CAL register |
-| R_SH1, R_SH2 | 2 | 2mΩ 1% ≥1W | 2512 | channel shunts in series `+5VA`→`/5V_CH1`, `+5VD`→`/5V_CH2`; INA226 Kelvin across each |
-| C21, C22 | 2 | 0.1µF | 0603 | INA226 VS decoupling on +3.3V |
-| R8, R9 | 2 | 115kΩ / 10kΩ | 0603 | U6 Vref divider (0.4V from VCC) |
-| R16 | 1 | 10MΩ | 0603 | U6 hysteresis (OUT→IN+) |
-| J2 | 1 | JST SH 4-pin (STEMMA QT) | SMD 1mm | GND / +3.3V / /SDA / /SCL |
-| F2, F3 | 2 | Polyfuse 2920L700/12MR (7A hold, 12V) | 2920 | channel feeds: C19/C20 → J4/J5; never on VBUS |
-| C19, C20 | 2 | **Panasonic EEEFPA221XAP** (220µF/10V SMD polymer) | SMD Ø6.3×7.7 → `Capacitor_SMD:CP_Elec_6.3x7.7` | channel bulk on /5V_CH1//5V_CH2 (220µF suffices — panels have their own caps) |
-| J4, J5 | 2 | Phoenix PT-1,5-2-3.5-H 2-pin 3.5mm screw terminal (Adafruit; hand-soldered) | THT | /5V_CH1, /5V_CH2 panel feeds (via F2/F3) |
+The orderable parts list lives in **`powerboard.csv`** (exported BOM) and in the schematic's
+`Part Number` / `LCSC Part #` fields. This section records *why* each choice was made, so a
+substitution can be judged correctly. When substituting, keep: package, pinout, key ratings,
+and the rail's voltage margin.
 
-**Value-field convention (done in the latest schematic — cap ratings are in the Value fields: C3/C4 `4.7uF/50V X7R`, C5 `10uF/50V X7R`, C7/C8 `22uF/10V X7R`, C11–C16 `33uF/10V X7R`, C1 `1uF/50V`, C2/C19/C20 full part numbers; small decoupling caps C6/C9/C10/C13/C14/C17/C18/C21/C22 still generic — 16–25V X7R/C0G is fine for them):** originally: put the key rating in the Value field so
-it flows into the BOM and part selection — capacitors get `µF/voltage dielectric` (voltage rating
-is critical at 20V bias: a 25V ceramic loses most of its capacitance on `VDC`), precision
-resistors get `1%`, inductors get their current rating, electrolytics get `low-ESR`. Suggested
-values: C1 `1uF/50V` ✓, C2 `100uF/35V` ✓, C3/C4 `4.7uF/50V X7R`, C5 `10uF/50V X7R`, C6 `100nF/25V`,
-C7/C8 `22uF/10V X7R` (use 0805/1206 10V parts), C9/C13 `100nF/16V`, C10/C14 `33pF/50V C0G`,
-C19/C20 `EEEFPA221XAP`, C21/C22 `0.1uF/25V`;
-R4/R5/R6/R10/R11 `… 1%` (ISET + FB divider), others 5%; L1 `4.7uH ±20% Irms≥2.7A Isat≥3.5A DCR<100mΩ`, L2/L3 `4.7uH ±20% Irms≥6A Isat≥8A` (see inductor note below);
-D1–D3 `LED … Vf ≤ 2.2V`. F1–F3 already carry full part numbers.
+- **PD sink + OVP switch (U1, Q1):** HUSB238 because it integrates the PMOS gate driver, OVP/OTP
+  and I2C status in one DFN-10; VSET open = 20V request, ISET left open (R4 DNP) = 3.25A cap.
+  Q1 = AOSP21357 P-MOSFET (8.5mΩ, −30V, wide SO-8) as the hard OVP disconnect — chosen over the
+  EOL AO4455; it only needs a gate series R (5.1k) + gate-source pull-up (49.9k), no zener clamp.
+- **Supervisor (U6):** LM397 (single comparator, open-collector, 5–30V) instead of the TPS3700
+  for JLCPCB stock/price — it has no internal reference, so we build Vref ≈ 0.575V from VCC
+  (R8 100k / R9 13k) and hysteresis with R16 2M; threshold on VDC via R13 510k / R14 39k gives
+  ≈ 8.4V (9V+ PD contracts enable the channels, a dumb 5V charger keeps them off). LM393DR2G is
+  the drop-in alternate.
+- **Housekeeping buck (U2) + ideal diode (U5):** AP63205WU fixed 5V/2A (EN→VIN, FB→VOUT) is
+  enough for the Portal tap; LM66100 (1.5A max — the tap is fused at 1.5A by F1 and only ever
+  carries ≤1A) blocks reverse current into the Portal. Small SC-70 pads are fine at 79mW.
+- **Channel bucks (U3/U4):** LMR51450SDRRR ×2 — 36V-in/5A, WSON-12, PFM + spread spectrum
+  (SDRRR), RT open = 500kHz. Inductors: one 4.7µH shielded part for all three positions
+  (Isat ≥ 6.5A so the inductor never saturates before the chip's 6.4A limit). Output caps:
+  2× 47µF 1206 X7R per channel (value chosen so DC-bias loss still leaves plenty), plus
+  220µF/10V SMD polymer per channel *after* the shunt (low ESR for the ripple; panels have
+  their own bulk caps).
+- **Current sensing (U7/U8, R_SH1/2):** INA226 + external 2mΩ 1% 2W 2512 shunts instead of the
+  INA260 (internal shunt) — swapped for stock/price; high-side shunt, Kelvin-connected at the
+  shunt pads. Firmware must program CAL = 0x200 (0.00512/(2mΩ×5A)) at boot. Addresses 0x40/0x44.
+- **Fuses:** PTC polyfuses per output rail only — F2/F3 2920L700/12MR (7A hold ≈ 4.8A at 70°C,
+  above the 4.2A channel design point, below the buck's limit so no nuisance trips) and F1
+  2920L150/12MR on the Portal tap. No fuse on VBUS: a compliant PD source already current-limits;
+  dead shorts are cleared by the converters' cycle-by-cycle limit + hiccup.
+- **Capacitor policy:** X7R everywhere on power rails (never X5R on the 20V rail), C0G only for
+  the 33pF feedforward (C10/C14 — value affects loop response). Voltage ratings with DC-bias
+  margin: **50V on VDC** (a 25V ceramic loses most of its µF at 20V bias), ≥10–16V on the 5V
+  rails; the VCC bulk pair is 0805 22µF 25V (0603 22µF is usually 6.3V-rated — too lossy). The two
+  bulk electrolytics are SMD polymer (low ESR for input/output ripple), the only named parts.
+- **Resistors:** 1% for everything (ISET is DNP; FB dividers R5/R11 51k + R6/R10 10k → 4.89V
+  out; supervisor divider as above). Basic 0603 series (Uniroyal 0603WAF on JLCPCB) for all.
+  LED series resistors sized for visibility: R18/R19 2.2k (green, Vf≈3V → ~0.9mA), R15 1k.
+- **Connectors:** J1 GCT USB4085-GF-A 16-pin THT USB-C (shell tabs to GND); J2 JST SH 4-pin
+  (STEMMA QT to the Portal); J3–J5 Phoenix PT-1,5-2-3.5-H 3.5mm 2-pin screw terminals — bought
+  from Adafruit and **hand-soldered** (THT); everything else is SMD and goes to JLCPCB assembly.
+- **Test points:** bare 2mm SMD pads, no part.
 
-**Capacitors need ratings, not brands** (except the electrolytics): dielectric **X7R** for all power
-ceramics (C0G/NP0 only for the 33pF feedforward C10/C14), never X5R on the 20V rail, and voltage rating
-with DC-bias margin as listed above (50V on `VDC`, ≥10V on the 5V rails). The two electrolytics are the
-only ones worth a named part: C2 = Chemi-Con **EMVH350ARA101MHA0G** (100µF/35V SMD polymer, Ø8×10,
-ripple-rated for the `VDC` input ripple) and C19/C20 = Panasonic **EEEFPA221XAP** (220µF/10V SMD
-polymer, Ø6.3×7.7) — both SMD, so JLCPCB assembles them (hand-solder only the screw terminals now).
-220µF/channel bulk is enough because the panels carry their own input caps. Everything else can be
-any X7R part in the right size.
-
-Not fitted (deliberate): input fuse on `VBUS` (§4 sheet 1 conditions), TVS on `VDC` (DNP
-footprint optional, §10 scope check decides), second panel terminal per channel, green/amber
-LEDs, on-board I2C pull-ups. Package notes assume JLCPCB assembles SMD and you hand-solder THT
-(screw terminals only — the electrolytics are SMD now). Confirm LCSC stock for every part when exporting the BOM.
+Deliberately **not fitted**: input fuse on VBUS, TVS on VDC (DNP — populate only if bring-up
+scoping shows >≈28–30V transients), second panel terminal per channel, on-board I2C pull-ups
+(the Portal's QT port provides them).
 
 ## 7. Power budget
 

@@ -79,7 +79,7 @@ only if bring-up scoping shows >≈28–30V transients.
 U1 HUSB238_002DD · Q1 AOSP21357 · U2 AP63205WU-7 · U3/U4 LMR51450SDRRR · U5 LM66100DCK ·
 U6 LM397 · U7/U8 INA226 + R_SH1/R_SH2 2mΩ 1% 1W 2512 shunts · L1/L2/L3 MPS MHCI06050-4R7M-R8A ·
 C2 Chemi-Con EMVH350ARA101MHA0G (100µF/35V SMD) · C19/C20 Panasonic EEEFPA221XAP (220µF/10V SMD) ·
-F1 2920L150/12MR · F2/F3 2920L700/12MR · J1 USB4085-GF-A · rest per `DESIGN.md` §6.
+F1 2920L150/12MR · F2/F3 2920L700/12MR · J1 USB4085-GF-A · exact orderable parts (MPN + LCSC C-code) are in `powerboard.csv`.
 
 ## Assembly / bring-up
 

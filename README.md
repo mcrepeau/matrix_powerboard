@@ -9,7 +9,7 @@ HUB75 data lines, the board supplies the panel power externally.
 
 - **[DATASHEET.md](DATASHEET.md)** — the board's user-facing spec: electrical characteristics, connector
   pinouts, LED meanings, firmware interface, key components, assembly/bring-up.
-- **[DESIGN.md](DESIGN.md)** — full design rationale, net list, per-pin hookup tables, BOM, layout and
+- **[DESIGN.md](DESIGN.md)** — full design rationale, net list, per-pin hookup tables, component-selection rationale, layout and
   safety notes, open items. Source of truth for the schematic.
 
 ## Architecture (as built, Rev A)

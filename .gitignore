@@ -1,0 +1,5 @@
+hardware/.history/
+hardware/gerber/
+*.kicad_prl
+*.lck
+*.zip
