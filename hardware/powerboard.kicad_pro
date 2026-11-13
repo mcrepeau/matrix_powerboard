@@ -687,6 +687,12 @@
           "label": "Part Number",
           "name": "Part Number",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "LCSC Part #",
+          "name": "LCSC Part #",
+          "show": true
         }
       ],
       "filter_string": "",
@@ -737,7 +743,7 @@
         "uuid": "01f724b0-a305-4804-9bb6-00dc8117a192"
       }
     ],
-    "used_designators": "#PWR1-54,C1-23,D1-3,F1-3,J1-5,L1-3,Q1-2,R1-21,TP1-6,U1-10",
+    "used_designators": "#PWR1-56,C1-25,D1-3,F1-3,J1-5,L1-4,Q1-2,R1-21,TP1-6,U1-10",
     "variants": []
   },
   "sheets": [
