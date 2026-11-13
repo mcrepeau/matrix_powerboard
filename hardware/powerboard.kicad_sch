@@ -8727,7 +8727,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm"
 			(at 260.35 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -12069,7 +12069,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Fuse:Fuse_1206_3216Metric"
 			(at 355.6 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -14604,7 +14604,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm"
 			(at 102.87 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -19018,7 +19018,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm"
 			(at 102.87 152.4 0)
 			(hide yes)
 			(show_name no)
@@ -20628,7 +20628,7 @@
 				)
 			)
 		)
-		(property "Part Number" "LM397MFX"
+		(property "Part Number" "LM397MFX/NOPB"
 			(at 248.92 118.11 0)
 			(hide yes)
 			(show_name no)
