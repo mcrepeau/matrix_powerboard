@@ -8727,7 +8727,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm"
+		(property "Footprint" "Inductor_SMD:L_Coilank_AAPS0650_7.7x6.6mm"
 			(at 260.35 44.45 0)
 			(hide yes)
 			(show_name no)
@@ -14604,7 +14604,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm"
+		(property "Footprint" "Inductor_SMD:L_Coilank_AAPS0650_7.7x6.6mm"
 			(at 102.87 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -19018,7 +19018,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm"
+		(property "Footprint" "Inductor_SMD:L_Coilank_AAPS0650_7.7x6.6mm"
 			(at 102.87 152.4 0)
 			(hide yes)
 			(show_name no)
