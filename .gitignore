@@ -1,5 +1,6 @@
 hardware/.history/
 hardware/gerber/
+hardware/jlcpcb/
 *.kicad_prl
 *.lck
 *.zip
