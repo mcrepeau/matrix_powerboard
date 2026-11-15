@@ -7073,7 +7073,7 @@
 		(descr "SMD pad as test Point, diameter 2.0mm")
 		(tags "test point SMD pad")
 		(property "Reference" "TP1"
-			(at -0.4 2.3 0)
+			(at 1.15 2.2 0)
 			(layer "F.SilkS")
 			(uuid "60900e3e-0af8-4255-b62a-58eb2a6a9514")
 			(effects
@@ -10237,7 +10237,7 @@
 		(descr "WSON, 6 Pin (http://www.ti.com/lit/ds/symlink/tps61040.pdf#page=35)")
 		(tags "WSON NoLead")
 		(property "Reference" "U9"
-			(at -2.3375 0.55 0)
+			(at -1.5875 1.95 0)
 			(layer "F.SilkS")
 			(uuid "4221cd38-5964-4d35-9ffb-30d3065b7232")
 			(effects
@@ -20421,6 +20421,15 @@
 		(uuid "6c1cf563-9d20-4cc6-8a54-f755a2056509")
 	)
 	(via
+		(at 143.35 48.65)
+		(size 0.6)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(free yes)
+		(net "GND")
+		(uuid "6cb4097b-8c19-4747-b1b2-9073b8b3fe58")
+	)
+	(via
 		(at 108.45 78.95)
 		(size 0.6)
 		(drill 0.3)
@@ -20828,6 +20837,15 @@
 		(uuid "e5c833ce-540f-4599-8489-0d5f97654362")
 	)
 	(via
+		(at 143.35 48)
+		(size 0.6)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(free yes)
+		(net "GND")
+		(uuid "e63f0b78-2453-4b49-a6af-30c3eeb68dae")
+	)
+	(via
 		(at 124.65 83.6)
 		(size 0.6)
 		(drill 0.3)
@@ -20853,6 +20871,15 @@
 		(free yes)
 		(net "GND")
 		(uuid "f0be8cf0-c5b5-45a6-9fcc-8fdce5390e15")
+	)
+	(via
+		(at 143.35 47.35)
+		(size 0.6)
+		(drill 0.3)
+		(layers "F.Cu" "B.Cu")
+		(free yes)
+		(net "GND")
+		(uuid "f87492ea-2ed6-4d53-b1ce-3a297a6a2b82")
 	)
 	(via
 		(at 124.65 82.15)

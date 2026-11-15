@@ -19961,7 +19961,7 @@
 				)
 			)
 		)
-		(property "Part Number" "TVS2200DRVR"
+		(property "Part Number" "LMTVS2200DRVR"
 			(at 76.2 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -19972,7 +19972,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C55616459"
+		(property "LCSC Part #" "C49330883"
 			(at 76.2 86.36 0)
 			(hide yes)
 			(show_name no)
