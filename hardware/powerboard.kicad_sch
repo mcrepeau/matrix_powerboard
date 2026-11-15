@@ -11511,7 +11511,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100µF/35V"
+		(property "Value" "100µF/50V"
 			(at 147.32 46.1009 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11522,7 +11522,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_8x10"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5"
 			(at 144.4752 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -11555,7 +11555,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C53446710"
+		(property "LCSC Part #" "C2161609"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -11566,7 +11566,7 @@
 				)
 			)
 		)
-		(property "Part Number" "GAM35V100M8X10"
+		(property "Part Number" "50PEV100M10X10.5"
 			(at 143.51 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -12706,8 +12706,8 @@
 				)
 			)
 		)
-		(property "Value" "19.1k 1%"
-			(at 96.52 175.514 90)
+		(property "Value" "19.1k"
+			(at 94.996 175.768 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13528,8 +13528,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k 1%"
-			(at 98.044 160.274 0)
+		(property "Value" "100k"
+			(at 100.584 160.274 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14756,8 +14756,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100k 1%"
-			(at 98.298 242.57 0)
+		(property "Value" "100k"
+			(at 100.584 242.57 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -14858,8 +14858,8 @@
 				)
 			)
 		)
-		(property "Value" "100nF/50V"
-			(at 250.444 53.594 90)
+		(property "Value" "100nF"
+			(at 248.158 53.594 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -16155,7 +16155,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C91604"
+		(property "LCSC Part #" "C45783"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -20398,7 +20398,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C91604"
+		(property "LCSC Part #" "C45783"
 			(at 0 0 0)
 			(hide yes)
 			(show_name no)
@@ -20672,8 +20672,8 @@
 				)
 			)
 		)
-		(property "Value" "19.1k 1%"
-			(at 97.282 258.572 90)
+		(property "Value" "19.1k"
+			(at 96.266 258.572 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
