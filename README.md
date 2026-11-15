@@ -3,6 +3,9 @@
 Custom power board that feeds **four 32×32 HUB75 LED panels (4096 LEDs)** plus the **Adafruit
 MatrixPortal S3** from one USB-C PD source (requested contract **20V/3A = 60W**, standard 3A cable).
 
+Board **Rev A**: 58.35 × 50.5 mm, 2-layer 1.6 mm (1 oz default, order 2 oz if offered), all SMD on
+top except the J3–J5 THT screw terminals. Orderable BOM with MPN + LCSC codes: `hardware/powerboard.csv`.
+
 The MatrixPortal S3's MCU can drive up to 4096 LEDs, but its own USB-C port only supplies 5V/3A —
 about 1500 LEDs at full white. This board lets the Portal run at full capacity: the Portal drives the
 HUB75 data lines, the board supplies the panel power externally.
@@ -48,7 +51,8 @@ Details and register maps: DATASHEET.md; rationale: DESIGN.md §5.
 
 ## Safety
 
-Panels are **5V only**. 20V@3A and 5V@8.4A are high-energy: protection is the HUSB238 OVP (24V) + Q1
-disconnect, per-rail PTC fuses (F1 tap, F2/F3 channels), converter current limits — never rely on
-software for hard limits. No input fuse (compliant PD sources only / current-limited bench supply).
+Panels are **5V only**. 20V@3A and 5V@8.4A are high-energy: protection is the U9 TVS2200DRV clamp on
+VBUS + HUSB238 OVP (24V) + Q1 disconnect, per-rail PTC fuses (F1 1206L100/12NR tap, F2/F3
+2920L700/12MR channels), converter current limits — never rely on software for hard limits.
+No input fuse (compliant PD sources only / current-limited bench supply).
 Strain-relieve all cables. Full notes: DESIGN.md §9.

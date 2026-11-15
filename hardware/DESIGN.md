@@ -1,7 +1,9 @@
 # MatrixChain Power Board: Design Document
 
-Revision A — matches the captured schematic (`powerboard/powerboard.kicad_sch`, board rev "A"),
-verified by netlist + ERC. Written 2 Nov 2026; updated 7 Nov 2026.
+Revision A — matches the captured schematic (`powerboard/powerboard.kicad_sch`, board rev "A",
+drawing date 2026-11-08) and the orderable BOM (`powerboard.csv`). Written 2 Nov 2026; updated
+7 Nov 2026; production sync 15 Nov 2026 (all part numbers, footprints, values and open items
+reconciled against `powerboard.csv`, the schematic and the PCB).
 
 This file is the source of truth for the design and the connection-level detail of the
 schematic. Anything marked **(suggested)** is an implementation detail filled in to close a
@@ -18,7 +20,7 @@ The problem this board solves: the MatrixPortal S3's MCU (ESP32-S3) is powerful 
 - Two independent 5V channels (LMR51450 buck converters, U3/U4) each feed two panels through the panels' dedicated 2-pin power connectors. Panel power never goes through the HUB75 data connector.
 - A separate housekeeping buck (U2, AP63205, fixed 5V) powers the Portal through a 1A fused tap, plus the status LED and the supervisor. It must work before PD negotiation completes and on a dumb 5V charger.
 - Two INA226 current sensors (U7/U8) with external 2mΩ shunts (R_SH1/R_SH2) report per-channel voltage and current to the Portal over I2C (STEMMA QT).
-- A comparator supervisor (U6, LM397 + external 0.4V reference) disables the panel channels when the input is not a valid PD contract. There is no CH_EN line from the Portal — the channels are gated by the supervisor alone.
+- A comparator supervisor (U6, LM397 + external ≈0.58V reference) disables the panel channels when the input is not a valid PD contract. There is no CH_EN line from the Portal — the channels are gated by the supervisor alone.
 
 
 ## 2. Architecture
@@ -33,7 +35,7 @@ VDC ─┬─► U2 AP63205 ──► VCC (housekeeping 5V) ──► U5 LM66100
      │      VCC also feeds: C7/C8/C18, U6 VDD, R17 pull-up, D1 anode
      ├─► U3 LMR51450SDRRR CH1 (EN = /POW_EN): SW ── L2 ──► +5VA ──► R_SH1 ──► /5V_CH1 ──► U7 INA226 (Kelvin) ──► C19 220µF ──► F2 ──► J4 (panels 1–2)
      ├─► U4 LMR51450SDRRR CH2 (EN = /POW_EN): SW ── L3 ──► +5VD ──► R_SH2 ──► /5V_CH2 ──► U8 INA226 (Kelvin) ──► C20 220µF ──► F3 ──► J5 (panels 3–4)
-     └─► R13 820k / R14 43k divider ──► U6 LM397 IN+ (≈8V threshold on VDC); Vref ≈0.4V from VCC via R8/R9
+     └─► R13 510k / R14 39k divider ──► U6 LM397 IN+ (≈8.1V threshold on VDC); Vref ≈0.58V from VCC via R8 100k / R9 13k
             U6 OUTA (open-drain) + R17 10k pull-up to VCC = /POW_EN ──► EN of U3, U4
             D1 (anode VCC) + R15 1k ──► /POW_EN : fault LED, lit when input invalid
 ```
@@ -70,7 +72,7 @@ panel power). The J1 shell (S1–S4) ties to GND.
 Reference designators are the ones on the schematic; the orderable BOM is `powerboard.csv` (rationale in section 6). Pin names refer
 to datasheet function names.
 
-### Sheet 1: Input (USB-C, PD sink, OVP switch, bulk)
+### Input (USB-C, PD sink, OVP switch, bulk)
 
 **J1 USB-C receptacle, 16-pin (USB4085-GF-A).** VBUS (A4/A9/B4/B9) → `VBUS`; GND pins and
 shell (S1–S4) → `GND`; CC1/CC2 and D+/D− (A6/A7) → U1; DP2/DN2/SBU unconnected. The HUSB238
@@ -92,8 +94,8 @@ the `_001`/`_003` variants drop to 5V on OTP (90/75°C); `_002DD` moves to the n
 
 **Q1 AOSP21357 (SO-8, wide 5.23mm).** PMOS between `VBUS` (source) and `VDC` (drain); gate from
 U1 GATE via R3, pulled up by R2. VGS rating ±25V covers −20…−24V at 20V/24V VBUS, so no zener
-clamp is needed. VDS −30V leaves margin at the 24V OVP trip. **(Open item: the schematic still
-has the narrow `SOIC-8_3.9x4.9mm` footprint — change to the AOS `SO8SOP-8L_AOS` footprint.)**
+clamp is needed. VDS −30V leaves margin at the 24V OVP trip. Footprint: `AOSP21357:SO8SOP-8L_AOS-L`
+(wide SOP-8) — assigned.
 
 **Input fuse: omitted by decision.** With a compliant PD source the charger's OCP bounds a
 short to ≈3A/≤60W, and Q1 gives OVP disconnect. Conditions when omitting: size `VDC` traces and
@@ -102,22 +104,24 @@ supply's current limit if using the suggested `J_BENCH` header), and do the §10
 before production. If fitted instead: one-shot slow-blow ≈3.5A hold, ≥32V rating, on `VBUS` at
 J1 before Q1 and the R1 tap.
 
-**Bulk on `VDC`:** C2 100µF/35V electrolytic/polymer across `VDC`–GND at the buck VIN cluster,
-plus C3/C4 4.7µF 50V X7R and C5 10µF. Use ≥35V rating — 25V parts lose much of their capacitance
-at 20V bias. This damps 20V hot-plug ringing; the HUSB238's own C1 stays at its VIN behind R1.
+**Bulk on `VDC`:** C2 100µF/35V SMD electrolytic 8×10 (GAM35V100M8X10, LCSC C53446710) across
+`VDC`–GND at the buck VIN cluster, plus C3/C4/C5 10µF 50V X7R 0805. Use ≥35V rating — 25V parts
+lose much of their capacitance at 20V bias. This damps 20V hot-plug ringing; the HUSB238's own
+C1 stays at its VIN behind R1. (The schematic Value field still reads "100µF/50V"; the ordered
+part per `powerboard.csv` is the 35V GAM35V100M8X10 — 35V is adequate on the 20V rail with the
+24V OVP trip.)
 
-**TVS on `VDC`: dropped.** The HUSB238's own OVP trips at 120% of the request (24V for 20V,
-50µs debounce) and opens Q1 on OVP/OTP/hard-reset, isolating `VDC`; the bucks are abs-max 38–40V,
-so the ≤24V that can pass before the OVP acts is within ratings, and the 100µF bulk damps
-hot-plug energy. Keep an SMBJ-class footprint DNP (standoff ≥26V, e.g. SMBJ26A, so it does not
-conduct at 24V) and populate only if the §10 scope check shows peaks above ≈28–30V on
-`VDC`/`VBUS` (Q1 is −30V VDS). The scope check is mandatory before production since no TVS is
-fitted.
+**TVS on `VBUS`: fitted as U9.** U9 = TVS2200DRV (TI Flat-Clamp, 22V standoff, WSON-6 2×2mm,
+`Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm`), pins 4–6 on `VBUS`, pins 1–3/7 on `GND`.
+It clamps VBUS transients (hot-plug ringing, cable inductance) before they reach U1/Q1; the
+HUSB238's own OVP (24V, 50µs debounce) plus Q1 still provide the sustained-overvoltage
+disconnect. Keep the §10 VBUS/VDC scope check at bring-up to confirm the clamp level is
+sufficient. Orderable part per `powerboard.csv`: **LMTVS2200DRVR** (LCSC C49330883).
 
-**(Suggested)** a DNP 2-pin 5.08mm header `J_BENCH` for a 20V bench supply and a 0Ω link in
-series with `VBUS` to isolate the USB-C front end during bring-up.
+**(Suggested, not fitted)** a DNP 2-pin 5.08mm header `J_BENCH` for a 20V bench supply and a
+0Ω link in series with `VBUS` to isolate the USB-C front end during bring-up.
 
-### Sheet 2: Housekeeping rail and Portal tap
+### Housekeeping rail and Portal tap
 
 **U2 AP63205WU-7 (TSOT26, fixed 5V, 2A, 3.8–32V in).** Values from the datasheet's recommended
 table for 5V out.
@@ -146,13 +150,13 @@ back-feeding a USB host and vice versa. CE is tied to VOUT — valid per the dat
 while CE < VIN, off when CE > VIN, so it also blocks back-feed). ST is left NC. A plain Schottky
 would drop ≈0.4V from a rail that already sits near 4.8V on a 5V fallback.
 
-**F1 polyfuse 2920L150/12MR** (1.5A hold, 12V) between U5 VOUT and J3 — protects the 1.5A
-LM66100; the tap is ≤1A. **J3** 2-pin 3.5mm screw terminal, Phoenix PT-1,5-2-3.5-H (`+5V` via F1, `GND`) → the
+**F1 polyfuse 1206L100/12NR** (1.0A hold, 12V, 1206 SMD PTC, `Fuse:Fuse_1206_3216Metric`) between
+U5 VOUT and J3 — protects the 1.5A LM66100; the tap is ≤1A. **J3** 2-pin 3.5mm screw terminal, Phoenix PT-1,5-2-3.5-H (`+5V` via F1, `GND`) → the
 MatrixPortal's M3 power screw terminals (+5V, GND). C17 1µF on the tap.
 
-### Sheet 3: Supervisor and fault LED
+### Supervisor and fault LED
 
-**U6 LM397 (SOT-23-5).** VDD from `VCC` (5–30V single supply). Single comparator — exactly our use. Same open-collector output as the LM393 (R17 pull-up unchanged); input common-mode includes ground (0 to VCC−1.5V); lower offset than LM393. LM393DR2G (SOIC-8 dual) is the drop-in alternate if the LM397 is not stocked. Divider from `VDC` — R13 820kΩ top, R14 43kΩ bottom — to IN+. The LM397 has **no internal reference**, so Vref ≈ 0.4V comes from a divider on `VCC` (as drawn: R8 115kΩ top, R9 10kΩ bottom → 5V × 10/125 = 0.4V). Rising threshold = 0.4 × (1 + 820/43) ≈ **8.0V** (tracks `VCC` ±4% — fine, 9V+ valid / 5V invalid either way). Output is **open-collector**: R17 10kΩ pulls it up to `VCC` → `/POW_EN` high when VDC ≥ ≈8V, driving U3/U4 EN directly. Add a few mV of hysteresis with R16 ≈ 10MΩ from output back to IN+ (anti-chatter on the 20V rail). Inputs are fine (tap ≈1V, ref 0.4V, both < VCC−1.5V). Note: LM397 chosen over the TPS3700 for JLCPCB stock/price (LM393DR2G is the drop-in alternate).
+**U6 LM397 (SOT-23-5).** VDD from `VCC` (5–30V single supply). Single comparator — exactly our use. Same open-collector output as the LM393 (R17 pull-up unchanged); input common-mode includes ground (0 to VCC−1.5V); lower offset than LM393. LM393DR2G (SOIC-8 dual) is the drop-in alternate if the LM397 is not stocked. Divider from `VDC` — R13 510kΩ top, R14 39kΩ bottom — to IN+. The LM397 has **no internal reference**, so Vref ≈ 0.575V comes from a divider on `VCC` (R8 100kΩ top, R9 13kΩ bottom → 5V × 13/113 ≈ 0.575V). Rising threshold = 0.575 × (1 + 510/39) ≈ **8.1V** (tracks `VCC` ±4% — fine, 9V+ valid / 5V invalid either way). Output is **open-collector**: R17 10kΩ pulls it up to `VCC` → `/POW_EN` high when VDC ≥ ≈8.1V, driving U3/U4 EN directly. Hysteresis: R16 2MΩ from output back to IN+ (a few mV of anti-chatter on the 20V rail). Inputs are fine (tap ≈1V, ref ≈0.58V, both < VCC−1.5V). Note: LM397 chosen over the TPS3700 for JLCPCB stock/price (LM393DR2G is the drop-in alternate).
 
 *Why a supervisor and not an op-amp:* an op-amp used as a comparator would need an external voltage reference (the 400mV threshold would otherwise be ratiometric to `VCC` and drift between 4.8–5V), added hysteresis (no chatter on the 20V rail), and its push-pull output complicates the `/POW_EN` pull-up + fault-LED arrangement. The TPS3700 has all of that built in — internal 400mV ±1% reference, falling hysteresis, open-drain output, inputs tolerant to 6.5V regardless of VDD (so the divider hangs directly on `VDC`) — in one SOT-23-6 covering both channels, at ~$0.30. The only true simplification would be using the LMR51450's own EN pin as a programmable UVLO (divider from `VDC` to EN), which would delete U6/R13/R14 — but you'd lose the precise threshold, the hysteresis and the fault-LED/PG indication, and each channel would need its own divider.
 
@@ -160,14 +164,13 @@ MatrixPortal's M3 power screw terminals (+5V, GND). C17 1µF on the tap.
 is invalid.
 
 **D2/D3 channel "power available" LEDs:** green LED from `+5VA` / `+5VD` through R18/R19 to GND
-(as drawn: R18/R19 = 10kΩ → ≈0.3mA, dim but visible; use 2.2–4.7kΩ for ≈0.7–1.3mA if you want
-brighter). Status scheme: D1 on = input not a valid PD contract; D2/D3 on = that channel's 5V is
+(R18/R19 = 2.2kΩ → ≈0.9mA with Vf≈3V). Status scheme: D1 on = input not a valid PD contract; D2/D3 on = that channel's 5V is
 up; D1 off but D2 or D3 off = that channel faulted (tripped F2/F3 or buck hiccup). If you'd rather
 the LED also catch a blown polyfuse, put it on the terminal side of F2/F3 instead. U7/U8 ALERT pins are NC, so overcurrent alerts are register-only (firmware must
 poll the Mask/Enable flag); if a local amber indication is wanted later: wire both ALERT pins
 together, pull up to `+3.3V`, LED + 470Ω to `+3.3V`.
 
-### Sheet 4: Panel channels (draw once, instantiate twice)
+### Panel channels (draw once, instantiate twice)
 
 **U3 / U4 LMR51450SDRRR (WSON-12, 3×3).** PFM variant with integrated spread spectrum — chosen
 for EMI (bucks next to HUB75 panels) and light-load efficiency; drop-in same package/pinout as
@@ -177,14 +180,14 @@ FNDRRR. Component values from the datasheet's Table 9-2 for 5V out at 500kHz.
 |---|---|
 | VIN | `VDC`, bulk + ceramics at the pins (§4 sheet 1) |
 | EN | `/POW_EN` (R17 pull-up to VCC); supervisor-driven only |
-| SW | L2/L3 4.7µH (6A RMS, 10A sat, above the 9.6A max peak limit) to `+5VA`/`+5VD` |
+| SW | L2/L3 4.7µH **APS0650M4R7A** (Isat ≈8.6A, Irms ≈7A — above the 9.6A max peak limit) to `+5VA`/`+5VD` |
 | BOOT | C9/C13 100nF to SW |
 | FB | Divider from `+5VA`/`+5VD`: R5/R11 100kΩ top, R6/R10 19.1kΩ bottom → ≈4.99V; C10/C14 33pF in series with R7/R12 1kΩ across the top resistor |
 | RT | Open = 500kHz default on the commercial part (RT shorted = 1MHz) |
 | PG | Optional; NC |
 | PGND / GND / thermal pad | `GND`, via array under the pad |
 
-Output capacitors: C11/C12 and C15/C16, 2×33µF each on `+5VA`/`+5VD` (pre-shunt).
+Output capacitors: C11/C12 and C15/C16, 2×**47µF/10V 1206** each on `+5VA`/`+5VD` (pre-shunt).
 
 **U7 / U8 INA226 (VSSOP-10).** Unlike the INA260 it has **no internal shunt** — each channel gets an external shunt **R_SH1/R_SH2: 2mΩ 1% ≥1W, 2512**, in series between `+5VA`→`/5V_CH1` (and `+5VD`→`/5V_CH2`); the INA226's VIN+/VIN− Kelvin-connect across the shunt (VIN+ to `+5VA`, VIN− to `/5V_CH1`). Shunt drop at 4.2A = 8.4mV (0.17%), dissipated in the shunt.
 
@@ -203,7 +206,7 @@ Output capacitors: C11/C12 and C15/C16, 2×33µF each on `+5VA`/`+5VD` (pre-shun
 **After the shunt/sensor:** `/5V_CH1`/`/5V_CH2` → C19/C20 **220µF/10V SMD polymer (Panasonic EEEFPA221XAP)** bulk → polyfuses F2/F3 2920L700/12MR (7A hold; ≈4.8A hold at 70°C per the Littelfuse derating table, survives the 4.2A channel current in a hot case; 12V rating fine at 5V, never on `VBUS`) → screw terminals J4/J5. One terminal per channel; if both panels of a pair get individual feeds, add a second terminal + ≈4A-hold PTC per feed, star-wired with short 14–16 AWG leads. Bulk is 220µF (not 2200µF) because the panels have their own onboard input caps — startup into 220µF ≈ 0.22A/channel, trivial. A PTC will not clear a dead short fast (the buck hiccups first) — it is the sustained-overload backstop.
 
 
-### Sheet 5: Connectors
+### Connectors
 
 **J2 STEMMA QT (JST SH 4-pin):** pin 1 GND, pin 2 `+3.3V`, pin 3 `/SDA`, pin 4 `/SCL`. The
 Portal's QT port has the I2C pull-ups to 3.3V; the board relies on those.
@@ -269,46 +272,50 @@ substitution can be judged correctly. When substituting, keep: package, pinout, 
 and the rail's voltage margin.
 
 - **PD sink + OVP switch (U1, Q1):** HUSB238 because it integrates the PMOS gate driver, OVP/OTP
-  and I2C status in one DFN-10; VSET open = 20V request, ISET left open (R4 DNP) = 3.25A cap.
+  and I2C status in one DFN-10; VSET open = 20V request, ISET R4 22.6kΩ = 3A request.
   Q1 = AOSP21357 P-MOSFET (8.5mΩ, −30V, wide SO-8) as the hard OVP disconnect — chosen over the
   EOL AO4455; it only needs a gate series R (5.1k) + gate-source pull-up (49.9k), no zener clamp.
 - **Supervisor (U6):** LM397 (single comparator, open-collector, 5–30V) instead of the TPS3700
   for JLCPCB stock/price — it has no internal reference, so we build Vref ≈ 0.575V from VCC
   (R8 100k / R9 13k) and hysteresis with R16 2M; threshold on VDC via R13 510k / R14 39k gives
-  ≈ 8.4V (9V+ PD contracts enable the channels, a dumb 5V charger keeps them off). LM393DR2G is
+  ≈ 8.1V (9V+ PD contracts enable the channels, a dumb 5V charger keeps them off). LM393DR2G is
   the drop-in alternate.
 - **Housekeeping buck (U2) + ideal diode (U5):** AP63205WU fixed 5V/2A (EN→VIN, FB→VOUT) is
-  enough for the Portal tap; LM66100 (1.5A max — the tap is fused at 1.5A by F1 and only ever
+  enough for the Portal tap; LM66100 (1.5A max — the tap is fused at 1A by F1 and only ever
   carries ≤1A) blocks reverse current into the Portal. Small SC-70 pads are fine at 79mW.
+- **Input TVS (U9):** TVS2200DRV on VBUS (22V standoff flat-clamp) — see §4 sheet 1.
 - **Channel bucks (U3/U4):** LMR51450SDRRR ×2 — 36V-in/5A, WSON-12, PFM + spread spectrum
-  (SDRRR), RT open = 500kHz. Inductors: one 4.7µH shielded part for all three positions
-  (Isat ≥ 6.5A so the inductor never saturates before the chip's 6.4A limit). Output caps:
-  2× 47µF 1206 X7R per channel (value chosen so DC-bias loss still leaves plenty), plus
-  220µF/10V SMD polymer per channel *after* the shunt (low ESR for the ripple; panels have
-  their own bulk caps).
+  (SDRRR), RT open = 500kHz. Inductors: one 4.7µH shielded part for all three positions —
+  **Coilank APS0650M4R7A** (LCSC C47327217), 6.6×7.7×5.0mm molded shielded, DCR 21.7mΩ max,
+  Isat ≈8.6A, Irms ≈7A (Isat ≥ 6.5A so the inductor never saturates before the chip's 6.4A
+  limit). Output caps: 2× 47µF/10V 1206 X7R per channel (value chosen so DC-bias loss still
+  leaves plenty), plus 220µF/10V SMD polymer per channel *after* the shunt (low ESR for the
+  ripple; panels have their own bulk caps).
 - **Current sensing (U7/U8, R_SH1/2):** INA226 + external 2mΩ 1% 2W 2512 shunts instead of the
   INA260 (internal shunt) — swapped for stock/price; high-side shunt, Kelvin-connected at the
   shunt pads. Firmware must program CAL = 0x200 (0.00512/(2mΩ×5A)) at boot. Addresses 0x40/0x44.
-- **Fuses:** PTC polyfuses per output rail only — F2/F3 2920L700/12MR (7A hold ≈ 4.8A at 70°C,
+- **Fuses:** PTC polyfuses per 5V output rail only — F2/F3 2920L700/12MR (7A hold ≈ 4.8A at 70°C,
   above the 4.2A channel design point, below the buck's limit so no nuisance trips) and F1
-  2920L150/12MR on the Portal tap. No fuse on VBUS: a compliant PD source already current-limits;
-  dead shorts are cleared by the converters' cycle-by-cycle limit + hiccup.
+  **1206L100/12NR** (1.0A hold, 1206 SMD) on the Portal tap. No fuse on VBUS: a compliant PD
+  source already current-limits; dead shorts are cleared by the converters' cycle-by-cycle
+  limit + hiccup.
 - **Capacitor policy:** X7R everywhere on power rails (never X5R on the 20V rail), C0G only for
   the 33pF feedforward (C10/C14 — value affects loop response). Voltage ratings with DC-bias
-  margin: **50V on VDC** (a 25V ceramic loses most of its µF at 20V bias), ≥10–16V on the 5V
-  rails; the VCC bulk pair is 0805 22µF 25V (0603 22µF is usually 6.3V-rated — too lossy). The two
-  bulk electrolytics are SMD polymer (low ESR for input/output ripple), the only named parts.
-- **Resistors:** 1% for everything (ISET is DNP; FB dividers R5/R11 51k + R6/R10 10k → 4.89V
-  out; supervisor divider as above). Basic 0603 series (Uniroyal 0603WAF on JLCPCB) for all.
+  margin: **50V on VDC** (a 25V ceramic loses most of its µF at 20V bias — C3/C4/C5 are 10µF/50V
+  0805), ≥10V on the 5V rails; the VCC bulk pair C7/C8 is 0805 22µF 25V. The input bulk C2 is
+  a 100µF/35V SMD electrolytic 8×10 (GAM35V100M8X10) and C19/C20 are 220µF/10V SMD polymer
+  6.3×7.7 (EEEFPA221XAP) — the only named parts.
+- **Resistors:** 1% for everything (FB dividers R5/R11 100k + R6/R10 19.1k → 4.99V out;
+  supervisor divider as above). Basic 0603 series (Uniroyal 0603WAF on JLCPCB) for all.
   LED series resistors sized for visibility: R18/R19 2.2k (green, Vf≈3V → ~0.9mA), R15 1k.
 - **Connectors:** J1 GCT USB4085-GF-A 16-pin THT USB-C (shell tabs to GND); J2 JST SH 4-pin
   (STEMMA QT to the Portal); J3–J5 Phoenix PT-1,5-2-3.5-H 3.5mm 2-pin screw terminals — bought
   from Adafruit and **hand-soldered** (THT); everything else is SMD and goes to JLCPCB assembly.
 - **Test points:** bare 2mm SMD pads, no part.
 
-Deliberately **not fitted**: input fuse on VBUS, TVS on VDC (DNP — populate only if bring-up
-scoping shows >≈28–30V transients), second panel terminal per channel, on-board I2C pull-ups
-(the Portal's QT port provides them).
+Deliberately **not fitted**: input fuse on VBUS, second panel terminal per channel, on-board I2C
+pull-ups (the Portal's QT port provides them), temperature sensor (see §11). The VBUS TVS **is**
+fitted (U9, see §4 sheet 1).
 
 ## 7. Power budget
 
@@ -337,7 +344,9 @@ Four panels = 4096 LEDs ≈ 8.4A at 5V at full white — far more than the Porta
 
 ## 8. Layout and manufacturing notes
 
-- **Board outline:** 57.3 × 49.8 mm (Edge.Cuts), single-sided component placement, 2× M2 mounting holes.
+- **Board outline:** 58.35 × 50.5 mm (Edge.Cuts, 1.5mm corner radius), single-sided component
+  placement (all SMD on top; only J3–J5 are THT), 2× M2 mounting holes. Default stackup
+  (2-layer, 1.6mm, 1oz/35µm copper); order 2oz if the fab offers it for the current-carrying pours.
 
 - **LMR51450 layout:** follow TI's EVM-style layout. θJA is 47.4°C/W (23°C/W on TI's EVM board). Solder the exposed pad with a via array (fill, plug or tent the vias under the pad as TI recommends), use ground planes, and keep the input capacitors right at the VIN and PGND pins. 2oz copper is preferred; check availability and restrictions with assembly at JLCPCB.
 - **Buck placement / channel separation:** no fixed spacing needed between U3 and U4 — the coupling is conducted (shared `VDC`) and radiated from the SW nodes, not distance-dependent. What matters: keep each channel's hot loop (SW pins → L → output caps → GND) compact and **do not interleave the two channels' SW/inductor areas**; keep SW copper area minimal and away from FB, I2C, the INA226s/shunts and the panel terminals; per-pin input ceramics + C2 bulk handle the shared-rail coupling; spread the two bucks thermally (2.1–2.4W each) and don't share a small copper island. Shielded inductors + 500kHz spread spectrum do the rest.
@@ -345,9 +354,19 @@ Four panels = 4096 LEDs ≈ 8.4A at 5V at full white — far more than the Porta
 - **Copper pours (zones) in KiCad:** select the copper layer, use the **Add filled zone** toolbar
   button, click a **closed** polygon around the area, then set the zone's **Net** and **Pad
   connection = Solid** (zone properties) — thermal-relief spokes are wrong for power/thermal pads.
-  Fill with **B** (or right-click → Zones → Fill All Zones); re-fill after moving parts. Whole-board
-  GND plane on B.Cu; per-rail pours (VDC/+5VA/+5VD/SW hot loop) as tight F.Cu polygons on the same
-  net. Stitch U3/U4 thermal pads to the plane with a via array (Add Via tool, net GND, solid).
+  Fill with **B** (or right-click → Zones → Fill All Zones); re-fill after moving parts.
+  - **B.Cu:** whole-board GND plane.
+  - **F.Cu:** tight per-rail pours (VBUS, VDC, +5VA, +5VD, SW hot loops, VCC) **plus** a whole-board
+    front GND plane. In KiCad 10 the plane must have the **lowest zone priority** (set it in the
+    selected zone's Properties panel, not the Zone Manager): the existing F.Cu zones use
+    priorities 1–26, so set the GND plane to **0** — higher priority fills first and wins the
+    overlap, so the plane only fills leftover space and never encroaches on the power pours.
+    (Do not rely on V10's automatic priority assignment here: it ranks by pad count in the overlap
+    and would give GND the *top* priority.) Clearance to other nets' pads/tracks is automatic.
+  - Stitch with GND vias (via-array tool, 0.6/0.3mm, F.Cu↔B.Cu, net GND): a via array under the
+    U3/U4 thermal pads, and 3–4mm stitching rings around C2 and each buck's hot loop
+    (SW → L → output caps → GND). On the placed stitching vias, disable "automatically update
+    via nets" in the via properties so Update-PCB-from-schematic keeps them on GND.
 - **Star ground:** put the star point near the channel bulk capacitors. Do not route panel return current through the Portal's ground.
 - **AP63205:** θJA is 89°C/W on a small board, so each 0.5W of loss adds about 45°C. Use a ground plane, 2oz copper if available, and vias on the GND pad of the capacitors.
 - **Creepage and enclosure:** 20V at 3A is 60W; fuse the rails, strain-relieve all cables.
@@ -374,29 +393,41 @@ with `VBUS` helps isolate nets during bring-up **(suggested)**.
 
 ## 10. Bring-up checks
 
-1. **VBUS/VDC scope check:** plug-in, unplug, and full-white on/off. Peaks approaching 24V would restart the board; add input damping first and populate the TVS only for spikes that threaten parts (criterion: > ≈28–30V, Q1 is −30V VDS). Mandatory since no TVS is fitted.
+1. **VBUS/VDC scope check:** plug-in, unplug, and full-white on/off. U9 (TVS2200DRV, 22V
+   standoff) clamps VBUS transients; confirm no sustained peaks approach the 24V OVP trip or
+   Q1's −30V VDS. Still mandatory at bring-up.
 2. **AP63205 bench check:** measure the output on a 5V input under Portal load (about 4.8V expected at the 1A tap limit) and the regulator's temperature at the Portal's real draw.
 3. **LMR51450 startup:** confirm clean startup and load steps with the 220µF bulk capacitor on each channel.
 4. **Power:** measure real input power at full white and compare with the budget in section 7.
 5. **Supervisor:** confirm the 8V threshold and the D1 (fault LED) behavior against the LM397 datasheet.
 
-## 11. Open items before layout
+## 11. Status and open items (production sync, 15 Nov 2026)
 
-- ✅ **Footprints all assigned** (re-verified 7 Nov 2026): zero empty Footprint fields remain; R/C/L/D/F/J per the table below; J3–J5 = `TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal` (Adafruit, hand-soldered); J2 = JST SH BM04B-SRSS-TB. Connectivity unchanged vs previous save. Caveat: C5 (10µF) and C7/C8 (22µF) are 0603 — check the LCSC parts' voltage ratings (want ≥25V for C5 on the 20V rail, ≥10V X7R for C7/C8 on the 5V rail; 0603 22µF is usually 6.3V-rated with heavy DC-bias loss — prefer 0805/1206 there).
+- ✅ **Footprints all assigned** (15 Nov 2026): zero empty Footprint fields remain; per the table
+  below; J3–J5 = `TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal`
+  (Adafruit, hand-soldered); J2 = `Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical`;
+  **L1–L3 = `Inductor_SMD:L_Coilank_AAPS0650_7.7x6.6mm`**, **F1 = `Fuse:Fuse_1206_3216Metric`**.
+  C5 (10µF/50V) and C7/C8 (22µF/25V) are 0805 per the CSV LCSC parts — the old 0603-rating caveat
+  is moot. **PCB updated from schematic (15 Nov 2026):** L1–L3 now `L_Coilank_AAPS0650_7.7x6.6mm`
+  and F1 `Fuse_1206_3216Metric` on the board (verified in `powerboard.kicad_pcb`).
 - ✅ Q1 footprint fixed: `AOSP21357:SO8SOP-8L_AOS-L` (wide SOP-8).
 - ✅ Symbol mismatches all resolved (latest save, ERC-verified).
 - ✅ U3 SW pin 1 reconnected (netlist-verified: `Net-(C9-Pad2)` = U3.1/2/3 + C9.2 + L2.1). ✅ All `lib_symbol_mismatch` warnings gone (custom symbols re-synced to the project libs). One cosmetic leftover: a single stray unconnected wire endpoint (1.27mm stub) — delete it in the GUI.
 - ERC cosmetics (optional): PWR_FLAGs on label-only power nets; no_connect flags on the intentional NC pins (J1 SBU/DP2/DN2, U1 VSET, U3/U4 PG+RT, U5 NC+ST, U6 OUTB, U7/U8 ALERT+NC).
 - ✅ `AP63200-AP63201-AP63203-AP63205.pdf` added to the datasheet folder.
-- Verify INA226 register map (CAL 0x05, alert-enable) and HUSB238 register map (source capabilities, negotiated contract, PDO select).
-- JLCPCB: stock and library class of every part, 2oz copper and plugged-via options, final LCSC numbers (part swaps done 8 Nov for stock/price: LM397 for TPS3700 (LM393DR2G as alternate), INA226 + 2mΩ shunts for INA260, EMVH350ARA101MHA0G / EEEFPA221XAP SMD polymer caps).
-- Firmware: program INA226 CAL register (0x05) at boot before reading current; verify INA226 alert-limit register.
-- **Board temperature sensor (recommended add):** TMP102/LM75A on the QT I2C bus at 0x48 (free address),
-  powered from `+3.3V` (J2 pin 2), placed between U3 and U4; firmware throttles brightness above
-  ≈65–70°C. Zero-part alternative: 10kΩ NTC divider from `+3.3V` to GND with the tap wired to the
-  Portal's unused A0-JST pin (GPIO12 ADC).
-- Firmware: blank HUB75 immediately at boot (channels auto-enable at VDC ≥ ≈8V, before the Portal is up).
-- D2/D3 channel LEDs added and netlist-verified (D2: +5VA→R18→GND, D3: +5VD→R19→GND; values GREEN LED, R18/R19 10k).
+- Firmware/order-time: verify the INA226 register map (CAL 0x05, alert-enable) and the HUSB238
+  register map (source capabilities, negotiated contract, PDO select); confirm JLCPCB stock and
+  library class of every LCSC number in the CSV, 2oz copper and plugged-via options, then freeze
+  the BOM. **BOM scope:** all SMD assembly parts — including U9 TVS2200DRV (LMTVS2200DRVR, LCSC
+  C49330883) — are in `powerboard.csv`; J3–J5 (Phoenix terminals, hand-soldered, bought separately)
+  and TP1–TP6 (bare pads, no part) are intentionally not assembly-BOM lines.
+- Closed by decision (no further action): **no temperature sensor fitted** (INA226 readings +
+  IR camera at bring-up cover it; TMP102 at 0x48 remains a possible future add); **no panel
+  reverse-polarity protection fitted** (observe polarity on the 2-pin panel plugs — documented in
+  DATASHEET.md); **no input fuse on VBUS**; one terminal per channel; no on-board I2C pull-ups.
+- Firmware: blank HUB75 immediately at boot (channels auto-enable at VDC ≥ ≈8.1V, before the
+  Portal is up); program the INA226 CAL register (0x05) at boot before reading current.
+- D2/D3 channel LEDs in place and netlist-verified (D2: +5VA→R18→GND, D3: +5VD→R19→GND; R18/R19 = 2.2kΩ).
 - **HUB75 5V back-feed (check your panels/cables):** the MatrixPortal's HUB75 port carries 5V on the same net as USB-C 5V and the M3 terminals (which our 1A F1 tap feeds). If the panel's IDC connector and the ribbon cable carry 5V (HUB75 is a loose spec — some panels/cables parallel IDC-5V with the panel 5V rail, standard 16-wire cables usually do not), the panel chain's 5V rails get a second feed from the Portal through the ribbon: current splits between the low-resistance channel feed (J4/J5 power sockets) and the high-resistance ribbon+Portal-PCB path, so up to F1's 1A can flow through the ribbon into the panels, heating ribbon wires/Portal traces, with the return current flowing through the Portal's GND instead of the power board's star point. Note the dedicated 2-pin power socket with 16AWG wires (≈0.004Ω/m) dominates the thin HUB75 ribbon (≈0.13Ω/m for 26AWG) by ~30× in resistance, so in normal operation the ribbon's parasitic share is only a few percent; it is hard-capped at F1's 1A worst case (e.g. if the channel rail sags at current limit). If your HUB75 link carries 5V, still do not connect it at the Portal end (keep GND for the signal return) so panel power and its return flow only via the 16AWG power path to the board's star point.
 - **Panel reverse polarity:** the 2-pin panel power plugs are user-wired and the panels themselves have no reverse protection. Consider a PMOS reverse-protection (or series Schottky) on each channel output, before F2/F3.
 - **Thermal budget:** compute per-part Tj at full load (8.4A) in worst-case ambient from the real copper (LMR51450 θJA 47.4°C/W 1oz / 23°C/W on the EVM, AP63205 89°C/W, Q1 ≈0.05W) and verify with an IR camera at bring-up; the 2.1–2.4W/channel figure in §7 implies a large rise on 1oz.
@@ -405,21 +436,25 @@ with `VBUS` helps isolate nets during bring-up **(suggested)**.
 
 | Refs | Value(s) | Recommended footprint |
 |---|---|---|
-| R1–R19 (all resistors) | 10Ω … 820kΩ | `Resistor_SMD:R_0603_1608Metric` |
+| R1–R19, R_SH1/2 | 1k–2MΩ, 2mΩ 1W | `Resistor_SMD:R_0603_1608Metric`, shunts `Resistor_SMD:R_2512_6332Metric` |
 | C1, C6, C9, C10, C13, C14, C17, C18, C21, C22 | 33pF–1µF | `Capacitor_SMD:C_0603_1608Metric` |
-| C3, C4 | 4.7µF 50V (VDC) | `Capacitor_SMD:C_0805_2012Metric` |
-| C5 | 10µF 50V (U2 VIN) | `Capacitor_SMD:C_0805_2012Metric` |
-| C7, C8 | 22µF (VCC) | `Capacitor_SMD:C_1206_3216Metric` (10V X7R) |
-| C11, C12, C15, C16 | 33µF (channel outputs) | `Capacitor_SMD:C_1206_3216Metric` |
-| C2 | 100µF 35V — **EMVH350ARA101MHA0G** (SMD polymer) | `Capacitor_SMD:CP_Elec_8x10` |
+| C3, C4, C5 | 10µF 50V (VDC / U2 VIN) | `Capacitor_SMD:C_0805_2012Metric` |
+| C7, C8 | 22µF 25V (VCC) | `Capacitor_SMD:C_0805_2012Metric` |
+| C11, C12, C15, C16 | 47µF 10V (channel outputs) | `Capacitor_SMD:C_1206_3216Metric` |
+| C2 | 100µF 35V — **GAM35V100M8X10** (SMD electrolytic 8×10, LCSC C53446710) | `Capacitor_SMD:CP_Elec_8x10` |
 | C19, C20 | 220µF 10V — **EEEFPA221XAP** (SMD polymer, Ø6.3×7.7) | `Capacitor_SMD:CP_Elec_6.3x7.7` |
-| D1, D2, D3 | LEDs | `LED_SMD:LED_0603_1608Metric` |
-| F1, F2, F3 | 2920L…/12MR PTC | `Fuse:Fuse_2920_7451Metric` |
-| L1, L2, L3 | 4.7µH shielded (MHCI06050-4R7M-R8A for all three) | `Inductor_SMD:L_6.3x6.3_H3` |
-| L2, L3 | 4.7µH, Isat≥6.5A, Irms≥5A (channels) | `Inductor_SMD:L_6.3x6.3_H3` (MHCI06050-4R7M-R8A) |
+| D1, D2, D3 | LEDs (red/green) | `LED_SMD:LED_0805_2012Metric` |
+| F1 | **1206L100/12NR** PTC (1.0A hold, 1206) | `Fuse:Fuse_1206_3216Metric` |
+| F2, F3 | 2920L700/12MR PTC | `Fuse:Fuse_2920_7451Metric` |
+| L1, L2, L3 | 4.7µH shielded — **Coilank APS0650M4R7A** (LCSC C47327217) | `Inductor_SMD:L_Coilank_AAPS0650_7.7x6.6mm` |
+| U9 | TVS2200DRV (VBUS clamp) | `Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm` |
+| TP1–TP6 | test pads | `TestPoint:TestPoint_Pad_D2.0mm` |
 | J3, J4, J5 | 2-pin 3.5mm screw terminal, Phoenix PT-1,5-2-3.5-H (Adafruit, hand-soldered — not via JLCPCB) | `TerminalBlock_Phoenix:TerminalBlock_Phoenix_PT-1,5-2-3.5-H_1x02_P3.50mm_Horizontal` |
 
-Inductor footprints must match the actual inductor parts picked at BOM time (check the LCSC part's datasheet package); same for the radial electrolytics' diameter/pitch.
+Inductor footprint verified against the part datasheet: `L_Coilank_AAPS0650_7.7x6.6mm`
+(project lib `libs/Inductor_SMD/`) matches the Coilank AAPS0650 recommended land pattern
+(`libs/Inductor_SMD/Coilank_AAPS.pdf`; APS and AAPS share the package) — pads 2.4×3.5mm at
+±3.0mm (F=8.4 outer, G=3.5, H=3.6), body 6.6×7.7×5.0mm.
 
 **Inductor selection notes:** tolerance **±20%** is standard for power inductors and is fine here — the
 bucks are peak-current-mode with internal compensation, and the ripple/limit math already has margin
@@ -432,16 +467,13 @@ this) — so a cheap 5.6µH or 6.8µH shielded part is fine. Shielded is **not**
 nearby). L1 (housekeeping, ≤1.2A load): Irms ≥ 1.5A, Isat ≥ 2.7A, DCR < 100mΩ — lots of room there. **Termination/package: SMD, shielded**
 (molded metal-alloy or shielded drum core), tape & reel for JLCPCB — unshielded drum cores radiate
 into the HUB75 panel wiring; on shielded parts connect the winding-start dot to the SW node for extra
-shielding. L2/L3 = **MPS MHCI06050-4R7M-R8A** (decided 8 Nov, cost/sourcing): molded (shielded) power choke,
-4.7µH ±20%, 6.0×6.0×5.0mm, DCR 25mΩ max, Irms 7A, Isat 6.5A (30% drop) — meets the L2/L3 floors
-(Isat ≥ 6.5A = just above the 6.4A chip limit, Irms ≥ 5A, DCR ≤ 50mΩ, shielded); footprint
-`Inductor_SMD:L_6.3x6.3_H3` (fits the 6.0mm body; or MPS's official land pattern). Alternatives if
-out of stock: TDK SPM10040T-4R7M-HZR (10×10×4mm, Isat/Irms ≈7.9A, DCR 18mΩ — footprint
-`L_Bourns_SRP1038C_10.0x10.0mm` fits), Bourns SRP1038CC-4R7M, or the EVM's Wurth 74437368047.
-L1 = **same part as L2/L3: MPS MHCI06050-4R7M-R8A** (decided 8 Nov to simplify the BOM — one inductor
-for all three positions): far above the AP63205 requirement (Isat > 2.7A, DCR < 100mΩ) for the ≤1.2A
-housekeeping load; ripple at 1.1MHz/1.2A is ≈0.7A, fine. Footprint `Inductor_SMD:L_6.3x6.3_H3`.
-Check the 5.0mm height fits the enclosure. Confirm the LCSC number/stock at BOM time.
+shielding. **L1 = L2 = L3 = Coilank APS0650M4R7A** (LCSC C47327217; the AAPS-series datasheet in
+`libs/Inductor_SMD/Coilank_AAPS.pdf` covers it — APS and AAPS share the package): molded (shielded) power choke,
+4.7µH ±20%, 6.6×7.7×5.0mm, DCR 21.7mΩ max, Isat ≈8.6A, Irms ≈7A — clears the L2/L3 floors
+(Isat ≥ 6.5A, Irms ≥ 5A, DCR ≤ 50mΩ, shielded) with margin, and is far above the AP63205's L1
+requirement (Isat > 2.7A, DCR < 100mΩ) for the ≤1.2A housekeeping load. One inductor line item
+for all three positions. Footprint `Inductor_SMD:L_Coilank_AAPS0650_7.7x6.6mm`.
+Check the 5.0mm height fits the enclosure.
 
 ## 12. Reference: datasheet-derived values used
 
@@ -452,6 +484,7 @@ Check the 5.0mm height fits the enclosure. Confirm the LCSC number/stock at BOM 
 | LMR51450 | 4–36V in (38V abs-max); 91% at 4A, 24V in; 0.8V ±1% reference; RT open = 500kHz default, RT shorted = 1MHz (commercial part; fsw 200kHz–1.1MHz with RT; only the -Q1 variant forbids floating RT); soft start 5ms (3.2–7.2ms); HS limit 6.4–9.6A, LS limit 5A; hiccup 96ms; EN 1.25V rising; θJA 47.4°C/W (23°C/W on EVM); SDRRR = PFM + spread spectrum (EVM part), FNDRRR = FPWM no SS; Table 9-2 (500kHz): 4.7µH, 2×33µF, 100kΩ/19.1kΩ, 33pF + 1kΩ |
 | INA226 | External shunt required (2mΩ 1% 1W per channel); CAL register 0x05 = 0.00512/(Rshunt×Imax); shunt reg 0x01 LSB 2.5µV, bus 0x02 LSB 1.25mV; VS 2.7–5.5V (I2C VIH = 0.7×VS); VBUS to supply rail; ALERT open-drain; addresses 0x40–0x4F via A1/A0 — as drawn: U7 A1=GND/A0=GND → 0x40, U8 A1=VS/A0=GND → 0x44 |
 | LM66100 | 1.5–5.5V in, 1.5A, ≈79mΩ, SC-70-6; MOSFET on while CE < VIN, off when CE > VIN (CE→VOUT valid, blocks back-feed); ST open-drain status |
-| LM397 | Single comparator, open-collector output (pull-up required — R17), 5–30V single supply, **no internal reference** (external 0.4V from VCC divider R8/R9), input common-mode includes ground (0 to VCC−1.5V; tap ≈1V fine), low offset; add R16 ≈10M output→IN+ for a few mV hysteresis; threshold = 0.4 × (1 + 820/43) ≈ 8.0V, tracks VCC ±4%. (LM393DR2G = dual SOIC-8 alternate, same hookup.) |
+| LM397 | Single comparator, open-collector output (pull-up required — R17), 5–30V single supply, **no internal reference** (external ≈0.575V from VCC divider R8 100k/R9 13k), input common-mode includes ground, low offset; R16 2M output→IN+ hysteresis; threshold = 0.575 × (1 + 510/39) ≈ 8.1V, tracks VCC ±4%. (LM393DR2G = dual SOIC-8 alternate, same hookup.) |
 | AOSP21357 | P-ch SO-8 (wide 5.23mm), VDS −30V, VGS ±25V, Rds(on) 8.5mΩ, ID −16A; AOS's replacement for the EOL AO4455 |
-| Littelfuse 2920L PTC | 2920L150/12MR: 1.5A hold; 2920L700/12MR: 7A hold (≈4.8A at 70°C), 12V max, 50A interrupt, R 4–20mΩ; never on VBUS (20–24V) |
+| PTC fuses | F1 1206L100/12NR: 1.0A hold, 12V, 1206 SMD (Portal tap); F2/F3 2920L700/12MR: 7A hold (≈4.8A at 70°C), 12V max, 50A interrupt, R 4–20mΩ; never on VBUS (20–24V) |
+| TVS2200DRV (U9) | 22V standoff flat-clamp, WSON-6, on VBUS (pins 4–6) to GND; clamps hot-plug transients ahead of the HUSB238 24V OVP / Q1 disconnect |
