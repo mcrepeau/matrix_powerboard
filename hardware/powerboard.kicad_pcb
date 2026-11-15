@@ -90,7 +90,7 @@
 		(capping no)
 		(filling no)
 		(pcbplotparams
-			(layerselection 0x00000000_00000000_55555555_d5555575)
+			(layerselection 0x00000000_00000000_55555555_d5555775)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_02000000)
 			(disableapertmacros no)
 			(usegerberextensions no)
@@ -123,7 +123,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "./")
+			(outputdirectory "pdf/")
 		)
 	)
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
@@ -844,8 +844,7 @@
 		(layer "F.Cu")
 		(uuid "08fe8de8-a4fc-44fc-a9aa-c0a070a748da")
 		(at 113.075 82.45 180)
-		(descr "Shielded Power Inductors (https://www.bourns.com/docs/product-datasheets/srp7028a.pdf)")
-		(tags "Shielded Inductors Bourns SMD SRP7028A")
+		(tags "Shielded Inductors Coilank AAPS0650")
 		(property "Reference" "L3"
 			(at 5.225 -2.5 0)
 			(layer "F.SilkS")
@@ -4809,8 +4808,7 @@
 		(layer "F.Cu")
 		(uuid "45125187-87da-4ad3-a293-87878b0a894b")
 		(at 113.5 47.1 180)
-		(descr "Shielded Power Inductors (https://www.bourns.com/docs/product-datasheets/srp7028a.pdf)")
-		(tags "Shielded Inductors Bourns SMD SRP7028A")
+		(tags "Shielded Inductors Coilank AAPS0650")
 		(property "Reference" "L2"
 			(at -5.15 -3.15 0)
 			(layer "F.SilkS")
@@ -15057,8 +15055,7 @@
 		(layer "F.Cu")
 		(uuid "cf72fa40-1dc4-46e3-9d82-3de3b94bb798")
 		(at 148.825 53.55)
-		(descr "Shielded Power Inductors (https://www.bourns.com/docs/product-datasheets/srp7028a.pdf)")
-		(tags "Shielded Inductors Bourns SMD SRP7028A")
+		(tags "Shielded Inductors Coilank AAPS0650")
 		(property "Reference" "L1"
 			(at 0 -4.2 0)
 			(layer "F.SilkS")
