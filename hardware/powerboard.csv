@@ -37,3 +37,4 @@
 "U5","1","LM66100","","Package_TO_SOT_SMD:SOT-363_SC-70-6","Ideal Diode With Input Polarity Protection 1.5 - 5.5V  Input Voltage, 1.5A Output Current, Ron 141 mOhm, SC-70-6","LM66100DCK","C2832141"
 "U6","1","LM397","","Package_TO_SOT_SMD:SOT-23-5","Single General-Purpose Voltage Comparator with Open-Collector Output, SOT-23-5","LM397MFX/NOPB","C132076"
 "U7,U8","2","INA226","","Package_SO:TSSOP-10_3x3mm_P0.5mm","High-Side or Low-Side Measurement, Bi-Directional Current and Power Monitor (0-36V) with I2C Compatible Interface, TSSOP-10 (Texas DGS0010A / VSSOP)","INA226AIDGSR","C49851"
+"U9","1","TVS2200DRV","","Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm","Flat-Clamp Surge Protection Device. 22Vrwm, WSON-6","TVS2200DRVR","C55616459"
