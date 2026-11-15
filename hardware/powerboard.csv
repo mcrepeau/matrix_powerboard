@@ -14,7 +14,7 @@
 "F2,F3","2","2920L700/12MR","","Fuse:Fuse_2920_7451Metric","Resettable fuse, polymeric positive temperature coefficient","2920L700/12MR","C207092"
 "J1","1","USB4085-GF-A","","USB4085-GF-A_REVA4:GCT_USB4085-GF-A_REVA4","USB-C (USB TYPE-C) USB 2.0 Receptacle Connector 24 (16+8 Dummy) Position Through Hole, Right Angle, low cost, 3.46mm profile, 16 pin, horizontal, Top mount","USB4085-GF-A","C7095263"
 "J2","1","SH1.0mm-4P-LT","","Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical","Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)","BM04B-SRSS-TB","C160390"
-"L1,L2,L3","3","4.7µH","","Inductor_SMD:L_Bourns_SRP7028A_7.3x6.6mm","Inductor","APS0650M4R7A","C47327217"
+"L1,L2,L3","3","4.7µH","","Inductor_SMD:L_Coilank_AAPS0650_7.7x6.6mm","Inductor","APS0650M4R7A","C47327217"
 "Q1","1","AOSP21357","","AOSP21357:SO8SOP-8L_AOS-L","","AOSP21357","C541725"
 "R1","1","10","","Resistor_SMD:R_0603_1608Metric","Resistor","0603WAF100JT5E","C22859"
 "R2","1","49.9K","","Resistor_SMD:R_0603_1608Metric","Resistor","0603WAF4992T5E","C23184"
